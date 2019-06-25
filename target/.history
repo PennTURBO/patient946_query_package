@@ -1,0 +1,7 @@
+sbt sbtVersion
+sbtVersion
+scala -version
+scala --version
+about
+eclipse
+about
