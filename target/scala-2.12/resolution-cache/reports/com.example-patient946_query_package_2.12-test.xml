@@ -7,7 +7,7 @@
 		revision="0.1.0-SNAPSHOT"
 		conf="test"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, pom, scala-tool"
-		date="20190626090132"/>
+		date="20190626133218"/>
 	<dependencies>
 		<module organisation="org.scala-lang" name="scala-reflect">
 			<revision name="2.12.3" status="release" pubdate="20170725064444" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.12.3/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="116">
@@ -1723,10 +1723,11 @@
 			</revision>
 		</module>
 		<module organisation="commons-logging" name="commons-logging">
-			<revision name="1.2" status="release" pubdate="20140705141228" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/proper/commons-logging/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="17">
+			<revision name="1.2" status="release" pubdate="20140705141228" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/proper/commons-logging/" downloaded="false" searched="false" default="false" conf="default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="17">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="11725" time="0" location="C:\Users\Mark Miller\.ivy2\cache\commons-logging\commons-logging\ivy-1.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/commons-logging/commons-logging/1.2/commons-logging-1.2.pom"/>
 				<caller organisation="org.apache.httpcomponents" name="httpclient" conf="compile, runtime" rev="1.2" rev-constraint-default="1.2" rev-constraint-dynamic="1.2" callerrev="4.5.6"/>
+				<caller organisation="com.example" name="patient946_query_package_2.12" conf="test, compile, runtime" rev="1.2" rev-constraint-default="1.2" rev-constraint-dynamic="1.2" callerrev="0.1.0-SNAPSHOT"/>
 				<caller organisation="commons-beanutils" name="commons-beanutils" conf="compile, runtime" rev="1.2" rev-constraint-default="1.2" rev-constraint-dynamic="1.2" callerrev="1.9.3"/>
 				<caller organisation="org.eclipse.rdf4j" name="rdf4j-client" conf="compile, runtime" rev="1.2" rev-constraint-default="1.2" rev-constraint-dynamic="1.2" callerrev="2.5.2"/>
 				<caller organisation="org.eclipse.rdf4j" name="rdf4j-storage" conf="compile, runtime" rev="1.2" rev-constraint-default="1.2" rev-constraint-dynamic="1.2" callerrev="2.5.2"/>
@@ -1752,16 +1753,23 @@
 			</revision>
 		</module>
 		<module organisation="ch.qos.logback" name="logback-classic">
-			<revision name="1.1.11" status="release" pubdate="20170301143704" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="6">
+			<revision name="1.1.11" status="release" pubdate="20170301143704" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master, default(compile)" position="6">
 				<license name="Eclipse Public License - v 1.0" url="http://www.eclipse.org/legal/epl-v10.html"/>
 				<license name="GNU Lesser General Public License" url="http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html"/>
 				<metadata-artifact status="no" details="" size="10667" time="0" location="C:\Users\Mark Miller\.ivy2\cache\ch.qos.logback\logback-classic\ivy-1.1.11.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/ch/qos/logback/logback-classic/1.1.11/logback-classic-1.1.11.pom"/>
+				<caller organisation="com.example" name="patient946_query_package_2.12" conf="test, compile, runtime" rev="1.1.5" rev-constraint-default="1.1.5" rev-constraint-dynamic="1.1.5" callerrev="0.1.0-SNAPSHOT"/>
 				<caller organisation="org.eclipse.rdf4j" name="rdf4j-console" conf="compile, runtime" rev="1.1.11" rev-constraint-default="1.1.11" rev-constraint-dynamic="1.1.11" callerrev="2.5.2"/>
 				<caller organisation="org.eclipse.rdf4j" name="rdf4j-config" conf="compile, runtime" rev="1.1.11" rev-constraint-default="1.1.11" rev-constraint-dynamic="1.1.11" callerrev="2.5.2"/>
 				<artifacts>
 					<artifact name="logback-classic" type="jar" ext="jar" status="no" details="" size="309130" time="0" location="C:\Users\Mark Miller\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.11.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/ch/qos/logback/logback-classic/1.1.11/logback-classic-1.1.11.jar"/>
 					</artifact>
+				</artifacts>
+			</revision>
+			<revision name="1.1.5" evicted="latest-revision" evicted-reason="" downloaded="false" searched="false" conf="default, compile, runtime, default(compile), master" position="-1">
+				<evicted-by rev="1.1.11"/>
+				<caller organisation="com.example" name="patient946_query_package_2.12" conf="test, compile, runtime" rev="1.1.5" rev-constraint-default="1.1.5" rev-constraint-dynamic="1.1.5" callerrev="0.1.0-SNAPSHOT"/>
+				<artifacts>
 				</artifacts>
 			</revision>
 		</module>

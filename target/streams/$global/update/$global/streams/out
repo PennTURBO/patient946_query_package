@@ -168,6 +168,10 @@
 [0m[[0m[0mdebug[0m] [0m[0msbt-chain: module revision found in cache: commons-logging#commons-logging;1.2[0m
 [0m[[0m[0mdebug[0m] [0m[0m	found commons-logging#commons-logging;1.2 in sbt-chain[0m
 [0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies commons-beanutils#commons-beanutils;1.9.3->commons-logging#commons-logging;1.2 [compile->compile(*)][0m
+[0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies commons-beanutils#commons-beanutils;1.9.3->commons-logging#commons-logging;1.2 [compile->default(compile)][0m
+[0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies commons-beanutils#commons-beanutils;1.9.3->commons-logging#commons-logging;1.2 [compile->runtime][0m
+[0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies commons-beanutils#commons-beanutils;1.9.3->commons-logging#commons-logging;1.2 [compile->compile][0m
+[0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies commons-beanutils#commons-beanutils;1.9.3->commons-logging#commons-logging;1.2 [compile->master][0m
 [0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies commons-beanutils#commons-beanutils;1.9.3->commons-collections#commons-collections;3.2.2 [compile->master(compile)][0m
 [0m[[0m[0mdebug[0m] [0m[0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]}[0m
 [0m[[0m[0mdebug[0m] [0m[0mdependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.3 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)], compile=[default(compile)]}[0m
@@ -2643,6 +2647,10 @@
 [0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies org.eclipse.rdf4j#rdf4j-runtime;2.5.2->org.eclipse.rdf4j#rdf4j-util;2.5.2 [runtime->runtime(*)][0m
 [0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies org.eclipse.rdf4j#rdf4j-runtime;2.5.2->org.eclipse.rdf4j#rdf4j-util;2.5.2 [runtime->compile][0m
 [0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies com.example#patient946_query_package_2.12;0.1.0-SNAPSHOT->org.eclipse.rdf4j#rdf4j-runtime;2.5.2 [compile->master][0m
+[0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies com.example#patient946_query_package_2.12;0.1.0-SNAPSHOT->commons-logging#commons-logging;1.2 [compile->default(compile)][0m
+[0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies com.example#patient946_query_package_2.12;0.1.0-SNAPSHOT->commons-logging#commons-logging;1.2 [compile->runtime][0m
+[0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies com.example#patient946_query_package_2.12;0.1.0-SNAPSHOT->commons-logging#commons-logging;1.2 [compile->compile][0m
+[0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies com.example#patient946_query_package_2.12;0.1.0-SNAPSHOT->commons-logging#commons-logging;1.2 [compile->master][0m
 [0m[[0m[0mdebug[0m] [0m[0mresolving dependencies for configuration 'runtime'[0m
 [0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies for com.example#patient946_query_package_2.12;0.1.0-SNAPSHOT [runtime][0m
 [0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies for com.example#patient946_query_package_2.12;0.1.0-SNAPSHOT [compile][0m
@@ -5072,6 +5080,15 @@
 [0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies org.eclipse.rdf4j#rdf4j-runtime;2.5.2->org.eclipse.rdf4j#rdf4j-util;2.5.2 [runtime->runtime(*)][0m
 [0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies org.eclipse.rdf4j#rdf4j-runtime;2.5.2->org.eclipse.rdf4j#rdf4j-util;2.5.2 [runtime->compile][0m
 [0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies com.example#patient946_query_package_2.12;0.1.0-SNAPSHOT->org.eclipse.rdf4j#rdf4j-runtime;2.5.2 [compile->master][0m
+[0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies com.example#patient946_query_package_2.12;0.1.0-SNAPSHOT->commons-logging#commons-logging;1.2 [compile->default(compile)][0m
+[0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies com.example#patient946_query_package_2.12;0.1.0-SNAPSHOT->commons-logging#commons-logging;1.2 [compile->runtime][0m
+[0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies com.example#patient946_query_package_2.12;0.1.0-SNAPSHOT->commons-logging#commons-logging;1.2 [compile->compile][0m
+[0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies com.example#patient946_query_package_2.12;0.1.0-SNAPSHOT->commons-logging#commons-logging;1.2 [compile->master][0m
+[0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies com.example#patient946_query_package_2.12;0.1.0-SNAPSHOT->ch.qos.logback#logback-classic;1.1.5 [runtime->default(compile)][0m
+[0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies com.example#patient946_query_package_2.12;0.1.0-SNAPSHOT->ch.qos.logback#logback-classic;1.1.11 [runtime->default(compile)][0m
+[0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies com.example#patient946_query_package_2.12;0.1.0-SNAPSHOT->ch.qos.logback#logback-classic;1.1.11 [runtime->runtime][0m
+[0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies com.example#patient946_query_package_2.12;0.1.0-SNAPSHOT->ch.qos.logback#logback-classic;1.1.11 [runtime->compile][0m
+[0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies com.example#patient946_query_package_2.12;0.1.0-SNAPSHOT->ch.qos.logback#logback-classic;1.1.11 [runtime->master][0m
 [0m[[0m[0mdebug[0m] [0m[0mresolving dependencies for configuration 'test'[0m
 [0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies for com.example#patient946_query_package_2.12;0.1.0-SNAPSHOT [test][0m
 [0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies for com.example#patient946_query_package_2.12;0.1.0-SNAPSHOT [runtime][0m
@@ -7730,6 +7747,15 @@
 [0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies org.eclipse.rdf4j#rdf4j-runtime;2.5.2->org.eclipse.rdf4j#rdf4j-util;2.5.2 [runtime->runtime(*)][0m
 [0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies org.eclipse.rdf4j#rdf4j-runtime;2.5.2->org.eclipse.rdf4j#rdf4j-util;2.5.2 [runtime->compile][0m
 [0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies com.example#patient946_query_package_2.12;0.1.0-SNAPSHOT->org.eclipse.rdf4j#rdf4j-runtime;2.5.2 [compile->master][0m
+[0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies com.example#patient946_query_package_2.12;0.1.0-SNAPSHOT->commons-logging#commons-logging;1.2 [compile->default(compile)][0m
+[0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies com.example#patient946_query_package_2.12;0.1.0-SNAPSHOT->commons-logging#commons-logging;1.2 [compile->runtime][0m
+[0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies com.example#patient946_query_package_2.12;0.1.0-SNAPSHOT->commons-logging#commons-logging;1.2 [compile->compile][0m
+[0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies com.example#patient946_query_package_2.12;0.1.0-SNAPSHOT->commons-logging#commons-logging;1.2 [compile->master][0m
+[0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies com.example#patient946_query_package_2.12;0.1.0-SNAPSHOT->ch.qos.logback#logback-classic;1.1.5 [runtime->default(compile)][0m
+[0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies com.example#patient946_query_package_2.12;0.1.0-SNAPSHOT->ch.qos.logback#logback-classic;1.1.11 [runtime->default(compile)][0m
+[0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies com.example#patient946_query_package_2.12;0.1.0-SNAPSHOT->ch.qos.logback#logback-classic;1.1.11 [runtime->runtime][0m
+[0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies com.example#patient946_query_package_2.12;0.1.0-SNAPSHOT->ch.qos.logback#logback-classic;1.1.11 [runtime->compile][0m
+[0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies com.example#patient946_query_package_2.12;0.1.0-SNAPSHOT->ch.qos.logback#logback-classic;1.1.11 [runtime->master][0m
 [0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies com.example#patient946_query_package_2.12;0.1.0-SNAPSHOT->org.scalatest#scalatest_2.12;3.0.8 [test->default(compile)][0m
 [0m[[0m[0mdebug[0m] [0m[0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]}[0m
 [0m[[0m[0mdebug[0m] [0m[0mdependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.3 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)], compile=[default(compile)]}[0m
@@ -10835,6 +10861,10 @@
 [0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies org.eclipse.rdf4j#rdf4j-runtime;2.5.2->org.eclipse.rdf4j#rdf4j-util;2.5.2 [runtime->runtime(*)][0m
 [0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies org.eclipse.rdf4j#rdf4j-runtime;2.5.2->org.eclipse.rdf4j#rdf4j-util;2.5.2 [runtime->compile][0m
 [0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies com.example#patient946_query_package_2.12;0.1.0-SNAPSHOT->org.eclipse.rdf4j#rdf4j-runtime;2.5.2 [compile->master][0m
+[0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies com.example#patient946_query_package_2.12;0.1.0-SNAPSHOT->commons-logging#commons-logging;1.2 [compile->default(compile)][0m
+[0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies com.example#patient946_query_package_2.12;0.1.0-SNAPSHOT->commons-logging#commons-logging;1.2 [compile->runtime][0m
+[0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies com.example#patient946_query_package_2.12;0.1.0-SNAPSHOT->commons-logging#commons-logging;1.2 [compile->compile][0m
+[0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies com.example#patient946_query_package_2.12;0.1.0-SNAPSHOT->commons-logging#commons-logging;1.2 [compile->master][0m
 [0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies for com.example#patient946_query_package_2.12;0.1.0-SNAPSHOT [optional][0m
 [0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies for com.example#patient946_query_package_2.12;0.1.0-SNAPSHOT [provided][0m
 [0m[[0m[0mdebug[0m] [0m[0mresolving dependencies for configuration 'runtime-internal'[0m
@@ -13723,6 +13753,15 @@
 [0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies org.eclipse.rdf4j#rdf4j-runtime;2.5.2->org.eclipse.rdf4j#rdf4j-util;2.5.2 [runtime->runtime(*)][0m
 [0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies org.eclipse.rdf4j#rdf4j-runtime;2.5.2->org.eclipse.rdf4j#rdf4j-util;2.5.2 [runtime->compile][0m
 [0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies com.example#patient946_query_package_2.12;0.1.0-SNAPSHOT->org.eclipse.rdf4j#rdf4j-runtime;2.5.2 [compile->master][0m
+[0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies com.example#patient946_query_package_2.12;0.1.0-SNAPSHOT->commons-logging#commons-logging;1.2 [compile->default(compile)][0m
+[0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies com.example#patient946_query_package_2.12;0.1.0-SNAPSHOT->commons-logging#commons-logging;1.2 [compile->runtime][0m
+[0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies com.example#patient946_query_package_2.12;0.1.0-SNAPSHOT->commons-logging#commons-logging;1.2 [compile->compile][0m
+[0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies com.example#patient946_query_package_2.12;0.1.0-SNAPSHOT->commons-logging#commons-logging;1.2 [compile->master][0m
+[0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies com.example#patient946_query_package_2.12;0.1.0-SNAPSHOT->ch.qos.logback#logback-classic;1.1.5 [runtime->default(compile)][0m
+[0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies com.example#patient946_query_package_2.12;0.1.0-SNAPSHOT->ch.qos.logback#logback-classic;1.1.11 [runtime->default(compile)][0m
+[0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies com.example#patient946_query_package_2.12;0.1.0-SNAPSHOT->ch.qos.logback#logback-classic;1.1.11 [runtime->runtime][0m
+[0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies com.example#patient946_query_package_2.12;0.1.0-SNAPSHOT->ch.qos.logback#logback-classic;1.1.11 [runtime->compile][0m
+[0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies com.example#patient946_query_package_2.12;0.1.0-SNAPSHOT->ch.qos.logback#logback-classic;1.1.11 [runtime->master][0m
 [0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies for com.example#patient946_query_package_2.12;0.1.0-SNAPSHOT [optional][0m
 [0m[[0m[0mdebug[0m] [0m[0mresolving dependencies for configuration 'test-internal'[0m
 [0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies for com.example#patient946_query_package_2.12;0.1.0-SNAPSHOT [test-internal][0m
@@ -17067,6 +17106,15 @@
 [0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies org.eclipse.rdf4j#rdf4j-runtime;2.5.2->org.eclipse.rdf4j#rdf4j-util;2.5.2 [runtime->runtime(*)][0m
 [0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies org.eclipse.rdf4j#rdf4j-runtime;2.5.2->org.eclipse.rdf4j#rdf4j-util;2.5.2 [runtime->compile][0m
 [0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies com.example#patient946_query_package_2.12;0.1.0-SNAPSHOT->org.eclipse.rdf4j#rdf4j-runtime;2.5.2 [compile->master][0m
+[0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies com.example#patient946_query_package_2.12;0.1.0-SNAPSHOT->commons-logging#commons-logging;1.2 [compile->default(compile)][0m
+[0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies com.example#patient946_query_package_2.12;0.1.0-SNAPSHOT->commons-logging#commons-logging;1.2 [compile->runtime][0m
+[0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies com.example#patient946_query_package_2.12;0.1.0-SNAPSHOT->commons-logging#commons-logging;1.2 [compile->compile][0m
+[0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies com.example#patient946_query_package_2.12;0.1.0-SNAPSHOT->commons-logging#commons-logging;1.2 [compile->master][0m
+[0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies com.example#patient946_query_package_2.12;0.1.0-SNAPSHOT->ch.qos.logback#logback-classic;1.1.5 [runtime->default(compile)][0m
+[0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies com.example#patient946_query_package_2.12;0.1.0-SNAPSHOT->ch.qos.logback#logback-classic;1.1.11 [runtime->default(compile)][0m
+[0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies com.example#patient946_query_package_2.12;0.1.0-SNAPSHOT->ch.qos.logback#logback-classic;1.1.11 [runtime->runtime][0m
+[0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies com.example#patient946_query_package_2.12;0.1.0-SNAPSHOT->ch.qos.logback#logback-classic;1.1.11 [runtime->compile][0m
+[0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies com.example#patient946_query_package_2.12;0.1.0-SNAPSHOT->ch.qos.logback#logback-classic;1.1.11 [runtime->master][0m
 [0m[[0m[0mdebug[0m] [0m[0m== resolving dependencies com.example#patient946_query_package_2.12;0.1.0-SNAPSHOT->org.scalatest#scalatest_2.12;3.0.8 [test->default(compile)][0m
 [0m[[0m[0mdebug[0m] [0m[0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.3 {scala-tool=[default, optional(default)]}[0m
 [0m[[0m[0mdebug[0m] [0m[0mdependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.3 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.3 {scala-tool=[default, optional(default)], compile=[default(compile)]}[0m
@@ -17431,128 +17479,224 @@
 [0m[[0m[0mdebug[0m] [0m[0mignoring unhandled DependencyDescriptorMediator: class sbt.internal.librarymanagement.IvyScalaUtil$OverrideScalaMediator[0m
 [0m[[0m[0mdebug[0m] [0m[0m	resolved ivy file produced in cache[0m
 [0m[[0m[0mdebug[0m] [0m[0m:: downloading artifacts ::[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-runtime;2.5.2!rdf4j-runtime.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.scala-lang#scala-library;2.12.3!scala-library.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-config;2.5.2!rdf4j-config.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-console;2.5.2!rdf4j-console.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-http-protocol;2.5.2!rdf4j-http-protocol.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-http-server-spring;2.5.2!rdf4j-http-server-spring.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-query;2.5.2!rdf4j-query.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-model;2.5.2!rdf4j-model.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-queryalgebra-evaluation;2.5.2!rdf4j-queryalgebra-evaluation.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] com.typesafe#config;1.3.4!config.jar(bundle)[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-queryalgebra-model;2.5.2!rdf4j-queryalgebra-model.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-queryalgebra-geosparql;2.5.2!rdf4j-queryalgebra-geosparql.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-queryparser-serql;2.5.2!rdf4j-queryparser-serql.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-queryrender;2.5.2!rdf4j-queryrender.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.scala-lang#scala-library;2.12.3!scala-library.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] commons-logging#commons-logging;1.2!commons-logging.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-runtime;2.5.2!rdf4j-runtime.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-config;2.5.2!rdf4j-config.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0mno default ivy user dir defined: set to C:\Users\Mark Miller\.ivy2[0m
+[0m[[0m[0mdebug[0m] [0m[0mno default ivy user dir defined: set to C:\Users\Mark Miller\.ivy2[0m
+[0m[[0m[0mdebug[0m] [0m[0mno default ivy user dir defined: set to C:\Users\Mark Miller\.ivy2[0m
+[0m[[0m[0mdebug[0m] [0m[0mno default ivy user dir defined: set to C:\Users\Mark Miller\.ivy2[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-console;2.5.2!rdf4j-console.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0mno default ivy user dir defined: set to C:\Users\Mark Miller\.ivy2[0m
+[0m[[0m[0mdebug[0m] [0m[0mno default ivy user dir defined: set to C:\Users\Mark Miller\.ivy2[0m
+[0m[[0m[0mdebug[0m] [0m[0mincluding url: jar:file:/C:/Users/Mark%20Miller/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-public.xml[0m
+[0m[[0m[0mdebug[0m] [0m[0mincluding url: jar:file:/C:/Users/Mark%20Miller/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-public.xml[0m
+[0m[[0m[0mdebug[0m] [0m[0mincluding url: jar:file:/C:/Users/Mark%20Miller/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-public.xml[0m
+[0m[[0m[0mdebug[0m] [0m[0mincluding url: jar:file:/C:/Users/Mark%20Miller/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-public.xml[0m
+[0m[[0m[0mdebug[0m] [0m[0mincluding url: jar:file:/C:/Users/Mark%20Miller/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-public.xml[0m
+[0m[[0m[0mdebug[0m] [0m[0mincluding url: jar:file:/C:/Users/Mark%20Miller/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-public.xml[0m
+[0m[[0m[0mdebug[0m] [0m[0mno default cache defined: set to C:\Users\Mark Miller\.ivy2\cache[0m
+[0m[[0m[0mdebug[0m] [0m[0mno default cache defined: set to C:\Users\Mark Miller\.ivy2\cache[0m
+[0m[[0m[0mdebug[0m] [0m[0mincluding url: jar:file:/C:/Users/Mark%20Miller/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml[0m
+[0m[[0m[0mdebug[0m] [0m[0mincluding url: jar:file:/C:/Users/Mark%20Miller/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml[0m
+[0m[[0m[0mdebug[0m] [0m[0mno default cache defined: set to C:\Users\Mark Miller\.ivy2\cache[0m
+[0m[[0m[0mdebug[0m] [0m[0mno default cache defined: set to C:\Users\Mark Miller\.ivy2\cache[0m
+[0m[[0m[0mdebug[0m] [0m[0mincluding url: jar:file:/C:/Users/Mark%20Miller/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml[0m
+[0m[[0m[0mdebug[0m] [0m[0mincluding url: jar:file:/C:/Users/Mark%20Miller/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml[0m
+[0m[[0m[0mdebug[0m] [0m[0mno default cache defined: set to C:\Users\Mark Miller\.ivy2\cache[0m
+[0m[[0m[0mdebug[0m] [0m[0mno default cache defined: set to C:\Users\Mark Miller\.ivy2\cache[0m
+[0m[[0m[0mdebug[0m] [0m[0mincluding url: jar:file:/C:/Users/Mark%20Miller/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml[0m
+[0m[[0m[0mdebug[0m] [0m[0mincluding url: jar:file:/C:/Users/Mark%20Miller/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml[0m
+[0m[[0m[0mdebug[0m] [0m[0mincluding url: jar:file:/C:/Users/Mark%20Miller/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-local.xml[0m
+[0m[[0m[0mdebug[0m] [0m[0mincluding url: jar:file:/C:/Users/Mark%20Miller/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-local.xml[0m
+[0m[[0m[0mdebug[0m] [0m[0mincluding url: jar:file:/C:/Users/Mark%20Miller/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-local.xml[0m
+[0m[[0m[0mdebug[0m] [0m[0mincluding url: jar:file:/C:/Users/Mark%20Miller/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-local.xml[0m
+[0m[[0m[0mdebug[0m] [0m[0mincluding url: jar:file:/C:/Users/Mark%20Miller/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-local.xml[0m
+[0m[[0m[0mdebug[0m] [0m[0mincluding url: jar:file:/C:/Users/Mark%20Miller/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml[0m
+[0m[[0m[0mdebug[0m] [0m[0mincluding url: jar:file:/C:/Users/Mark%20Miller/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml[0m
+[0m[[0m[0mdebug[0m] [0m[0mincluding url: jar:file:/C:/Users/Mark%20Miller/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-local.xml[0m
+[0m[[0m[0mdebug[0m] [0m[0mincluding url: jar:file:/C:/Users/Mark%20Miller/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml[0m
+[0m[[0m[0mdebug[0m] [0m[0mincluding url: jar:file:/C:/Users/Mark%20Miller/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml[0m
+[0m[[0m[0mdebug[0m] [0m[0mincluding url: jar:file:/C:/Users/Mark%20Miller/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml[0m
+[0m[[0m[0mdebug[0m] [0m[0mincluding url: jar:file:/C:/Users/Mark%20Miller/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml[0m
+[0m[[0m[0mdebug[0m] [0m[0mincluding url: jar:file:/C:/Users/Mark%20Miller/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml[0m
+[0m[[0m[0mdebug[0m] [0m[0mincluding url: jar:file:/C:/Users/Mark%20Miller/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml[0m
+[0m[[0m[0mdebug[0m] [0m[0mincluding url: jar:file:/C:/Users/Mark%20Miller/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml[0m
+[0m[[0m[0mdebug[0m] [0m[0mincluding url: jar:file:/C:/Users/Mark%20Miller/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml[0m
+[0m[[0m[0mdebug[0m] [0m[0mincluding url: jar:file:/C:/Users/Mark%20Miller/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml[0m
+[0m[[0m[0mdebug[0m] [0m[0mincluding url: jar:file:/C:/Users/Mark%20Miller/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml[0m
+[0m[[0m[0mdebug[0m] [0m[0msettings loaded (44ms)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	default cache: C:\Users\Mark Miller\.ivy2\cache[0m
+[0m[[0m[0mdebug[0m] [0m[0m	default resolver: default[0m
+[0m[[0m[0mdebug[0m] [0m[0m	-- 5 resolvers:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	shared [file][0m
+[0m[[0m[0mdebug[0m] [0m[0msettings loaded (43ms)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	default cache: C:\Users\Mark Miller\.ivy2\cache[0m
+[0m[[0m[0mdebug[0m] [0m[0m	default resolver: default[0m
+[0m[[0m[0mdebug[0m] [0m[0m	-- 5 resolvers:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	shared [file][0m
+[0m[[0m[0mdebug[0m] [0m[0m	default [chain] [local, main][0m
+[0m[[0m[0mdebug[0m] [0m[0m	public [ibiblio][0m
+[0m[[0m[0mdebug[0m] [0m[0m	default [chain] [local, main][0m
+[0m[[0m[0mdebug[0m] [0m[0m	public [ibiblio][0m
+[0m[[0m[0mdebug[0m] [0m[0m	main [chain] [shared, public][0m
+[0m[[0m[0mdebug[0m] [0m[0m	local [file][0m
+[0m[[0m[0mdebug[0m] [0m[0m	main [chain] [shared, public][0m
+[0m[[0m[0mdebug[0m] [0m[0m	local [file][0m
+[0m[[0m[0mdebug[0m] [0m[0msettings loaded (44ms)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	default cache: C:\Users\Mark Miller\.ivy2\cache[0m
+[0m[[0m[0mdebug[0m] [0m[0m	default resolver: default[0m
+[0m[[0m[0mdebug[0m] [0m[0m	-- 5 resolvers:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	shared [file][0m
+[0m[[0m[0mdebug[0m] [0m[0m	default [chain] [local, main][0m
+[0m[[0m[0mdebug[0m] [0m[0m	public [ibiblio][0m
+[0m[[0m[0mdebug[0m] [0m[0m	main [chain] [shared, public][0m
+[0m[[0m[0mdebug[0m] [0m[0m	local [file][0m
+[0m[[0m[0mdebug[0m] [0m[0msettings loaded (48ms)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	default cache: C:\Users\Mark Miller\.ivy2\cache[0m
+[0m[[0m[0mdebug[0m] [0m[0m	default resolver: default[0m
+[0m[[0m[0mdebug[0m] [0m[0m	-- 5 resolvers:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	shared [file][0m
+[0m[[0m[0mdebug[0m] [0m[0m	default [chain] [local, main][0m
+[0m[[0m[0mdebug[0m] [0m[0m	public [ibiblio][0m
+[0m[[0m[0mdebug[0m] [0m[0m	main [chain] [shared, public][0m
+[0m[[0m[0mdebug[0m] [0m[0m	local [file][0m
+[0m[[0m[0mdebug[0m] [0m[0msettings loaded (48ms)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	default cache: C:\Users\Mark Miller\.ivy2\cache[0m
+[0m[[0m[0mdebug[0m] [0m[0m	default resolver: default[0m
+[0m[[0m[0mdebug[0m] [0m[0m	-- 5 resolvers:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	shared [file][0m
+[0m[[0m[0mdebug[0m] [0m[0m	default [chain] [local, main][0m
+[0m[[0m[0mdebug[0m] [0m[0m	public [ibiblio][0m
+[0m[[0m[0mdebug[0m] [0m[0m	main [chain] [shared, public][0m
+[0m[[0m[0mdebug[0m] [0m[0m	local [file][0m
+[0m[[0m[0mdebug[0m] [0m[0msettings loaded (48ms)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	default cache: C:\Users\Mark Miller\.ivy2\cache[0m
+[0m[[0m[0mdebug[0m] [0m[0m	default resolver: default[0m
+[0m[[0m[0mdebug[0m] [0m[0m	-- 5 resolvers:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	shared [file][0m
+[0m[[0m[0mdebug[0m] [0m[0m	default [chain] [local, main][0m
+[0m[[0m[0mdebug[0m] [0m[0m	public [ibiblio][0m
+[0m[[0m[0mdebug[0m] [0m[0m	main [chain] [shared, public][0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-query;2.5.2!rdf4j-query.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-queryalgebra-evaluation;2.5.2!rdf4j-queryalgebra-evaluation.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-model;2.5.2!rdf4j-model.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	local [file][0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-http-server-spring;2.5.2!rdf4j-http-server-spring.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-queryparser-api;2.5.2!rdf4j-queryparser-api.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-queryresultio-api;2.5.2!rdf4j-queryresultio-api.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-queryresultio-binary;2.5.2!rdf4j-queryresultio-binary.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-queryresultio-sparqlxml;2.5.2!rdf4j-queryresultio-sparqlxml.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-queryresultio-text;2.5.2!rdf4j-queryresultio-text.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-repository-api;2.5.2!rdf4j-repository-api.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-queryresultio-sparqljson;2.5.2!rdf4j-queryresultio-sparqljson.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-repository-contextaware;2.5.2!rdf4j-repository-contextaware.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-repository-dataset;2.5.2!rdf4j-repository-dataset.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-repository-http;2.5.2!rdf4j-repository-http.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-repository-event;2.5.2!rdf4j-repository-event.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-repository-manager;2.5.2!rdf4j-repository-manager.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-repository-sparql;2.5.2!rdf4j-repository-sparql.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-repository-sail;2.5.2!rdf4j-repository-sail.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-rio-binary;2.5.2!rdf4j-rio-binary.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-queryalgebra-model;2.5.2!rdf4j-queryalgebra-model.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-http-protocol;2.5.2!rdf4j-http-protocol.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-queryparser-sparql;2.5.2!rdf4j-queryparser-sparql.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-rio-datatypes;2.5.2!rdf4j-rio-datatypes.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-queryrender;2.5.2!rdf4j-queryrender.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-queryalgebra-geosparql;2.5.2!rdf4j-queryalgebra-geosparql.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-queryresultio-binary;2.5.2!rdf4j-queryresultio-binary.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-queryresultio-sparqljson;2.5.2!rdf4j-queryresultio-sparqljson.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-queryresultio-sparqlxml;2.5.2!rdf4j-queryresultio-sparqlxml.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-queryparser-serql;2.5.2!rdf4j-queryparser-serql.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-repository-api;2.5.2!rdf4j-repository-api.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-repository-contextaware;2.5.2!rdf4j-repository-contextaware.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-queryresultio-api;2.5.2!rdf4j-queryresultio-api.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-repository-dataset;2.5.2!rdf4j-repository-dataset.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-repository-event;2.5.2!rdf4j-repository-event.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-repository-http;2.5.2!rdf4j-repository-http.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-queryresultio-text;2.5.2!rdf4j-queryresultio-text.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-repository-sparql;2.5.2!rdf4j-repository-sparql.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-repository-manager;2.5.2!rdf4j-repository-manager.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-rio-api;2.5.2!rdf4j-rio-api.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-rio-binary;2.5.2!rdf4j-rio-binary.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-rio-jsonld;2.5.2!rdf4j-rio-jsonld.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-rio-languages;2.5.2!rdf4j-rio-languages.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-rio-n3;2.5.2!rdf4j-rio-n3.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-repository-sail;2.5.2!rdf4j-repository-sail.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-rio-nquads;2.5.2!rdf4j-rio-nquads.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-rio-datatypes;2.5.2!rdf4j-rio-datatypes.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-rio-rdfjson;2.5.2!rdf4j-rio-rdfjson.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-rio-rdfxml;2.5.2!rdf4j-rio-rdfxml.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-rio-ntriples;2.5.2!rdf4j-rio-ntriples.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-rio-trix;2.5.2!rdf4j-rio-trix.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-rio-turtle;2.5.2!rdf4j-rio-turtle.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-sail-api;2.5.2!rdf4j-sail-api.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-rio-trig;2.5.2!rdf4j-rio-trig.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-sail-base;2.5.2!rdf4j-sail-base.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-sail-federation;2.5.2!rdf4j-sail-federation.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-sail-api;2.5.2!rdf4j-sail-api.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-sail-elasticsearch;2.5.2!rdf4j-sail-elasticsearch.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-sail-lucene;2.5.2!rdf4j-sail-lucene.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-sail-federation;2.5.2!rdf4j-sail-federation.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-sail-lucene-api;2.5.2!rdf4j-sail-lucene-api.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-sail-solr;2.5.2!rdf4j-sail-solr.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-sail-inferencer;2.5.2!rdf4j-sail-inferencer.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-sail-memory;2.5.2!rdf4j-sail-memory.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-sail-nativerdf;2.5.2!rdf4j-sail-nativerdf.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-sail-model;2.5.2!rdf4j-sail-model.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-sail-lucene;2.5.2!rdf4j-sail-lucene.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-sail-nativerdf;2.5.2!rdf4j-sail-nativerdf.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-sail-spin;2.5.2!rdf4j-sail-spin.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-lucene-spin;2.5.2!rdf4j-lucene-spin.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-spin;2.5.2!rdf4j-spin.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-lucene-spin;2.5.2!rdf4j-lucene-spin.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-util;2.5.2!rdf4j-util.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] ch.qos.logback#logback-classic;1.1.11!logback-classic.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-rio-n3;2.5.2!rdf4j-rio-n3.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] ch.qos.logback#logback-core;1.1.11!logback-core.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.slf4j#slf4j-api;1.7.25!slf4j-api.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-client;2.5.2!rdf4j-client.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-storage;2.5.2!rdf4j-storage.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] ch.qos.logback#logback-core;1.1.11!logback-core.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.jline#jline;3.6.2!jline.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] commons-cli#commons-cli;1.4!commons-cli.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.apache.httpcomponents#httpcore;4.4.10!httpcore.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.apache.httpcomponents#httpclient;4.5.6!httpclient.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] com.opencsv#opencsv;4.3.2!opencsv.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] com.fasterxml.jackson.core#jackson-core;2.9.8!jackson-core.jar(bundle)[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.apache.commons#commons-lang3;3.8.1!commons-lang3.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.apache.commons#commons-text;1.3!commons-text.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] commons-beanutils#commons-beanutils;1.9.3!commons-beanutils.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-sail-lucene-api;2.5.2!rdf4j-sail-lucene-api.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] commons-collections#commons-collections;3.2.2!commons-collections.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.apache.commons#commons-collections4;4.2!commons-collections4.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-sail-memory;2.5.2!rdf4j-sail-memory.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] com.github.jsonld-java#jsonld-java;0.12.3!jsonld-java.jar(bundle)[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] com.fasterxml.jackson.core#jackson-databind;2.9.8!jackson-databind.jar(bundle)[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] com.fasterxml.jackson.core#jackson-annotations;2.9.8!jackson-annotations.jar(bundle)[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.apache.httpcomponents#httpclient-cache;4.5.6!httpclient-cache.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] commons-io#commons-io;2.6!commons-io.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.apache.httpcomponents#httpclient;4.5.6!httpclient.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.mapdb#mapdb;1.0.8!mapdb.jar(bundle)[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] com.google.guava#guava;18.0!guava.jar(bundle)[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.locationtech.spatial4j#spatial4j;0.7!spatial4j.jar(bundle)[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.locationtech.jts#jts-core;1.15.1!jts-core.jar(bundle)[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.apache.lucene#lucene-core;6.6.1!lucene-core.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.apache.lucene#lucene-highlighter;6.6.1!lucene-highlighter.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] commons-io#commons-io;2.6!commons-io.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.apache.lucene#lucene-queries;6.6.1!lucene-queries.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.apache.lucene#lucene-highlighter;6.6.1!lucene-highlighter.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.apache.lucene#lucene-join;6.6.1!lucene-join.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.apache.lucene#lucene-memory;6.6.1!lucene-memory.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.apache.lucene#lucene-analyzers-common;6.6.1!lucene-analyzers-common.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.apache.lucene#lucene-sandbox;6.6.1!lucene-sandbox.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] commons-logging#commons-logging;1.2!commons-logging.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.apache.lucene#lucene-spatial-extras;6.6.1!lucene-spatial-extras.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.apache.lucene#lucene-queryparser;6.6.1!lucene-queryparser.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.apache.lucene#lucene-sandbox;6.6.1!lucene-sandbox.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.apache.lucene#lucene-misc;6.6.1!lucene-misc.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.apache.lucene#lucene-spatial-extras;6.6.1!lucene-spatial-extras.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.apache.lucene#lucene-spatial3d;6.6.1!lucene-spatial3d.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.apache.solr#solr-solrj;6.6.1!solr-solrj.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.apache.httpcomponents#httpmime;4.5.6!httpmime.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.apache.zookeeper#zookeeper;3.4.10!zookeeper.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.codehaus.woodstox#stax2-api;3.1.4!stax2-api.jar(bundle)[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.noggit#noggit;0.6!noggit.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] com.fasterxml.jackson.core#jackson-core;2.9.8!jackson-core.jar(bundle)[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.codehaus.woodstox#woodstox-core-asl;4.4.1!woodstox-core-asl.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.noggit#noggit;0.6!noggit.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.apache.commons#commons-math3;3.5!commons-math3.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.apache.lucene#lucene-analyzers-common;6.6.1!lucene-analyzers-common.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] commons-lang#commons-lang;2.6!commons-lang.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.slf4j#jcl-over-slf4j;1.7.25!jcl-over-slf4j.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] javax.servlet#jstl;1.2!jstl.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.slf4j#jcl-over-slf4j;1.7.25!jcl-over-slf4j.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] commons-codec#commons-codec;1.11!commons-codec.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.springframework#spring-webmvc;4.3.21.RELEASE!spring-webmvc.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.springframework#spring-aop;4.3.21.RELEASE!spring-aop.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.springframework#spring-context;4.3.21.RELEASE!spring-context.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.springframework#spring-beans;4.3.21.RELEASE!spring-beans.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.springframework#spring-core;4.3.21.RELEASE!spring-core.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] taglibs#standard;1.1.2!standard.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-http-client;2.5.2!rdf4j-http-client.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-rio-api;2.5.2!rdf4j-rio-api.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.springframework#spring-context;4.3.21.RELEASE!spring-context.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.springframework#spring-expression;4.3.21.RELEASE!spring-expression.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.springframework#spring-web;4.3.21.RELEASE!spring-web.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] taglibs#standard;1.1.2!standard.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.eclipse.rdf4j#rdf4j-http-client;2.5.2!rdf4j-http-client.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.scalatest#scalatest_2.12;3.0.8!scalatest_2.12.jar(bundle)[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.scala-lang#scala-reflect;2.12.3!scala-reflect.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.12;1.2.0!scala-xml_2.12.jar(bundle)[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.scala-lang#scala-compiler;2.12.3!scala-compiler.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.scalactic#scalactic_2.12;3.0.8!scalactic_2.12.jar(bundle)[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.12;1.0.6!scala-xml_2.12.jar(bundle)[0m
-[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.apache.httpcomponents#httpmime;4.5.6!httpmime.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.springframework#spring-core;4.3.21.RELEASE!spring-core.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.scala-lang#scala-compiler;2.12.3!scala-compiler.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.scala-lang#scala-reflect;2.12.3!scala-reflect.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.apache.httpcomponents#httpclient-cache;4.5.6!httpclient-cache.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] jline#jline;2.14.4!jline.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m:: resolution report :: resolve 1673ms :: artifacts dl 33ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.12;1.2.0!scala-xml_2.12.jar(bundle)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.12;1.0.6!scala-xml_2.12.jar(bundle)[0m
+[0m[[0m[0mdebug[0m] [0m[0m:: resolution report :: resolve 4603ms :: artifacts dl 127ms[0m
 [0m[[0m[0mdebug[0m] [0m[0m	report for com.example#patient946_query_package_2.12;0.1.0-SNAPSHOT compile produced in C:\Users\Mark Miller\patient946_query_package\target\scala-2.12\resolution-cache\reports\com.example-patient946_query_package_2.12-compile.xml[0m
 [0m[[0m[0mdebug[0m] [0m[0m	report for com.example#patient946_query_package_2.12;0.1.0-SNAPSHOT runtime produced in C:\Users\Mark Miller\patient946_query_package\target\scala-2.12\resolution-cache\reports\com.example-patient946_query_package_2.12-runtime.xml[0m
 [0m[[0m[0mdebug[0m] [0m[0m	report for com.example#patient946_query_package_2.12;0.1.0-SNAPSHOT test produced in C:\Users\Mark Miller\patient946_query_package\target\scala-2.12\resolution-cache\reports\com.example-patient946_query_package_2.12-test.xml[0m
@@ -17564,6 +17708,6 @@
 [0m[[0m[0mdebug[0m] [0m[0m	report for com.example#patient946_query_package_2.12;0.1.0-SNAPSHOT plugin produced in C:\Users\Mark Miller\patient946_query_package\target\scala-2.12\resolution-cache\reports\com.example-patient946_query_package_2.12-plugin.xml[0m
 [0m[[0m[0mdebug[0m] [0m[0m	report for com.example#patient946_query_package_2.12;0.1.0-SNAPSHOT pom produced in C:\Users\Mark Miller\patient946_query_package\target\scala-2.12\resolution-cache\reports\com.example-patient946_query_package_2.12-pom.xml[0m
 [0m[[0m[0mdebug[0m] [0m[0m	report for com.example#patient946_query_package_2.12;0.1.0-SNAPSHOT scala-tool produced in C:\Users\Mark Miller\patient946_query_package\target\scala-2.12\resolution-cache\reports\com.example-patient946_query_package_2.12-scala-tool.xml[0m
-[0m[[0m[0mdebug[0m] [0m[0m	resolve done (1673ms resolve - 33ms download)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	resolve done (4603ms resolve - 127ms download)[0m
 [0m[[0m[0minfo[0m] [0m[0mDone updating.[0m
 [0m[[0m[33mwarn[0m] [0m[0mThere may be incompatibilities among your library dependencies; run 'evicted' to see detailed eviction warnings.[0m

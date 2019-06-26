@@ -5,3 +5,10 @@
 [0m[[0m[0minfo[0m] [0m[0m[32m- Check for CRID subclass denoting a person in the expanded graph[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Check for symbol subclass in expanded graph[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Check for symbol subclass part of CRID subclass in the expanded graph[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Check for CRID subclass, with symbol subclass part, denoting a person in the expanded graph[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Check for CRID subclass, with symbol subclass part, denoting a person in the expanded graph. Symbol should have a value of 00002c66-a365-4e88-8e80-d52bcad4869e[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Check for date of birth DATUM in expanded graph[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Check for start of neonate stage PROCESS BOUNDARY in expanded graph[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Check for date of birth about some start of neonate stage in the expanded graph.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Check for date of birth about some start of neonate stage on which a person was born (in the expanded graph.)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Check for date of birth about some start of neonate stage on which the '00002c66-a365-4e88-8e80-d52bcad4869e' person was born (in the expanded graph.)[0m[0m
