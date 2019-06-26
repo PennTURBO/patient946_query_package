@@ -1,2 +1,7 @@
 [0m[[0m[0minfo[0m] [0m[0m[32mupAndRunning:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- named graph http://www.itmat.upenn.edu/biobank/expanded is present[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Check for expanded graph[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Check for Homo sapiens in expanded graph[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Check for CRID subclass in expanded graph[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Check for CRID subclass denoting a person in the expanded graph[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Check for symbol subclass in expanded graph[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Check for symbol subclass part of CRID subclass in the expanded graph[0m[0m

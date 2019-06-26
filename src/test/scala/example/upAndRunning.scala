@@ -1,69 +1,171 @@
 package example
 
-//import org.eclipse.rdf4j.model.impl._
-//import org.eclipse.rdf4j.model.vocabulary.FOAF
-//import org.eclipse.rdf4j.model.vocabulary.RDF
-//import org.eclipse.rdf4j.repository.manager.RemoteRepositoryManager
-//import org.eclipse.rdf4j.repository.sparql._
 import com.typesafe.config.ConfigFactory
 import org.eclipse.rdf4j.query.QueryLanguage
 import org.eclipse.rdf4j.repository.sparql.SPARQLRepository
 import org.scalatest.FunSuite
+import oracle.jrockit.jfr.Repository
+import org.eclipse.rdf4j.repository.RepositoryConnection
+import org.scalatest.BeforeAndAfter
 
-class upAndRunning extends FunSuite {
+class upAndRunning extends FunSuite with BeforeAndAfter {
+  
+  // TODO don't send debug log statements to console
 
-  var parsedConfig = ConfigFactory.parseResources("defaults.conf")
-  var endpointValue = parsedConfig.getString("conf.sparqlEndpoint")
-  //  println(endpointValue)
+  // TODO factor out the connection opening and closing into before and after blocks
 
-  //  var vf = SimpleValueFactory.getInstance()
-  //  var ex = "http://example.org/"
-  //  var picasso = vf.createIRI(ex, "Picasso")
-  //  var artist = vf.createIRI(ex, "Artist")
-  //  var model = new TreeModel()
-  //  model.add(picasso, RDF.TYPE, artist)
-  //  model.add(picasso, FOAF.FIRST_NAME, vf.createLiteral("Pablo"))
-  //
-  //  var firstStmt = model.first()
-  //  println(firstStmt)
+  def graphInRepo(myGraph: String): Boolean = {
+    //    println(myGraph)
+    val parsedConfig = ConfigFactory.parseResources("defaults.conf")
+    val endpointValue = parsedConfig.getString("conf.sparqlEndpoint")
+    val SparqlRepo = new SPARQLRepository(endpointValue)
+    SparqlRepo.initialize()
+    val con = SparqlRepo.getConnection()
+    val queryString = " ask where { graph <" + myGraph + "> { ?s ?p ?o } } "
+    //    println(queryString)
+    val booleanQuery = con.prepareBooleanQuery(QueryLanguage.SPARQL, queryString)
+    val booleanResult = booleanQuery.evaluate()
+    con.close
+    SparqlRepo.shutDown
+    //    println(booleanResult)
+    booleanResult
+  }
 
-  //    for (statement <- model) {
-  //      println(statement(s))
-  //    }
+  def classInGraph(myClass: String, myGraph: String): Boolean = {
+    //    println(myGraph)
+    val parsedConfig = ConfigFactory.parseResources("defaults.conf")
+    val endpointValue = parsedConfig.getString("conf.sparqlEndpoint")
+    val SparqlRepo = new SPARQLRepository(endpointValue)
+    SparqlRepo.initialize()
+    val con = SparqlRepo.getConnection()
+    val queryString = " ask where { graph <" + myGraph + "> { ?s a <" + myClass + "> } } "
+    //    println(queryString)
+    val booleanQuery = con.prepareBooleanQuery(QueryLanguage.SPARQL, queryString)
+    val booleanResult = booleanQuery.evaluate()
+    con.close
+    SparqlRepo.shutDown
+    //    println(booleanResult)
+    booleanResult
+  }
 
-  //  val sparqlEndpoint = "http://pennturbo.org:7200/repositories/Mark_production"
+  // fix this to use the TURBO autonym/epinym
+  def superClassInGraph(myClass: String, myGraph: String): Boolean = {
+    //    println(myGraph)
+    val parsedConfig = ConfigFactory.parseResources("defaults.conf")
+    val endpointValue = parsedConfig.getString("conf.sparqlEndpoint")
+    val SparqlRepo = new SPARQLRepository(endpointValue)
+    SparqlRepo.initialize()
+    val con = SparqlRepo.getConnection()
+    val queryString = """
+ask where {
+    graph <http://www.itmat.upenn.edu/biobank/ontology> {
+        ?t <http://www.w3.org/2000/01/rdf-schema#subClassOf>* <""" + myClass + """> 
+    }
+    graph <""" + myGraph + """> {
+        ?s a ?t .
+    }
+}
+"""
+    println(queryString)
+    val booleanQuery = con.prepareBooleanQuery(QueryLanguage.SPARQL, queryString)
+    val booleanResult = booleanQuery.evaluate()
+    con.close
+    SparqlRepo.shutDown
+    //    println(booleanResult)
+    booleanResult
+  }
 
-  val SparqlRepo = new SPARQLRepository(endpointValue)
-  SparqlRepo.initialize()
+  def arbitraryAsk(myAsk: String): Boolean = {
+    //    println(myGraph)
+    val parsedConfig = ConfigFactory.parseResources("defaults.conf")
+    val endpointValue = parsedConfig.getString("conf.sparqlEndpoint")
+    val SparqlRepo = new SPARQLRepository(endpointValue)
+    SparqlRepo.initialize()
+    val con = SparqlRepo.getConnection()
+    //    println(myAsk)
+    val booleanQuery = con.prepareBooleanQuery(QueryLanguage.SPARQL, myAsk)
+    val booleanResult = booleanQuery.evaluate()
+    con.close
+    SparqlRepo.shutDown
+    //    println(booleanResult)
+    booleanResult
+  }
 
-  val con = SparqlRepo.getConnection()
+  test("Check for expanded graph") {
+    val fxnRes = graphInRepo("http://www.itmat.upenn.edu/biobank/expanded")
+    //    println(fxnRes)
+    assert(fxnRes)
+  }
 
-  //  var queryString = "SELECT ?x ?p ?y WHERE { ?x ?p ?y } limit 30 "
-  //  var tupleQuery = con.prepareTupleQuery(QueryLanguage.SPARQL, queryString)
-  //  var tuplesResult = tupleQuery.evaluate()
-  //
-  //  while (tuplesResult.hasNext()) { // iterate over the result
-  //    val bindingSet = tuplesResult.next()
-  //    val valueOfX = bindingSet.getValue("x")
-  //    val valueOfP = bindingSet.getValue("p")
-  //    val valueOfY = bindingSet.getValue("y")
-  //    val toPrint = valueOfX + " " + valueOfP + " " + valueOfY
-  //    println(toPrint)
+  // TODO: TURBO ontology (and all ontologies) should be loaded into a graph named after the subject of their '?a a owl:Ontology' statement
+  // additional statements could saw where the ontology was loaded from, like a web URL
+
+  //  test("Check for eponymous TURBO graph") {
+  //    val fxnRes = graphInRepo("https://raw.githubusercontent.com/PennTURBO/Turbo-Ontology/master/ontologies/turbo_merged.owl")
+  //    //    println(fxnRes)
+  //    assert(fxnRes)
   //  }
 
-  var expectedGraph = "http://www.itmat.upenn.edu/biobank/expanded"
-  var queryString = " ask where { graph <" + expectedGraph + "> { ?s ?p ?o } } "
-  var booleanQuery = con.prepareBooleanQuery(QueryLanguage.SPARQL, queryString)
-  var booleanResult = booleanQuery.evaluate()
-  println(booleanResult)
+  test("Check for Homo sapiens in expanded graph") {
+    val fxnRes = classInGraph("http://purl.obolibrary.org/obo/NCBITaxon_9606", "http://www.itmat.upenn.edu/biobank/expanded")
+    //    println(fxnRes)
+    assert(fxnRes)
+  }
 
-  test("named graph " + expectedGraph + " is present") {
-    assert(booleanResult)
+  test("Check for CRID subclass in expanded graph") {
+    val fxnRes = superClassInGraph("http://purl.obolibrary.org/obo/IAO_0000578", "http://www.itmat.upenn.edu/biobank/expanded")
+    //    println(fxnRes)
+    assert(fxnRes)
+  }
+
+  test("Check for CRID subclass denoting a person in the expanded graph") {
+    val myAsk = """
+            ask where {
+    graph <http://www.itmat.upenn.edu/biobank/ontology> {
+        ?cridType <http://www.w3.org/2000/01/rdf-schema#subClassOf>* <http://purl.obolibrary.org/obo/IAO_0000578> 
+    }
+    graph <http://www.itmat.upenn.edu/biobank/expanded> {
+        ?cridInst a ?cridType ;
+                  <http://purl.obolibrary.org/obo/IAO_0000219> ?personInst .
+        ?personInst a <http://purl.obolibrary.org/obo/NCBITaxon_9606> .
+    }
+}"""
+    val fxnRes = arbitraryAsk(myAsk)
+    assert(fxnRes)
+  }
+
+  test("Check for symbol subclass in expanded graph") {
+    val fxnRes = superClassInGraph("http://purl.obolibrary.org/obo/IAO_0000028", "http://www.itmat.upenn.edu/biobank/expanded")
+    //    println(fxnRes)
+    assert(fxnRes)
+  }
+
+  // part of or has part?
+
+  test("Check for symbol subclass part of CRID subclass in the expanded graph") {
+    val myAsk = """
+ask where {
+    graph <http://www.itmat.upenn.edu/biobank/ontology> {
+        ?cridType <http://www.w3.org/2000/01/rdf-schema#subClassOf>* <http://purl.obolibrary.org/obo/IAO_0000578> .
+        ?symbolType <http://www.w3.org/2000/01/rdf-schema#subClassOf>* <http://purl.obolibrary.org/obo/IAO_0000028> .
+    }
+    graph <http://www.itmat.upenn.edu/biobank/expanded> {
+        ?cridInst a ?cridType .
+        ?symbolInst a ?symbolType .
+        {
+            {
+                ?symbolInst <http://purl.obolibrary.org/obo/BFO_0000050> ?cridInst .
+            }
+            union {
+                ?cridInst <http://purl.obolibrary.org/obo/BFO_0000051> ?symbolInst .
+            }
+        }
+    }
+}"""
+    val fxnRes = arbitraryAsk(myAsk)
+    assert(fxnRes)
   }
 
   //  tuplesResult.close
-  //  booleanResult.close
-  con.close
-  SparqlRepo.shutDown
 
 }
