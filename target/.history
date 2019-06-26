@@ -5,3 +5,10 @@ scala --version
 about
 eclipse
 about
+eclipse
+about
+run all
+run
+reload
+eclipse with-source=true
+test
