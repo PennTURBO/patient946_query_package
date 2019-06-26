@@ -84,16 +84,14 @@ class upAndRunning extends FunSuite with BeforeAndAfter {
     assert(fxnRes)
   }
 
-  // put the commented version in a mark branch
-
   // TODO: TURBO ontology (and all ontologies) should be loaded into a graph named after the subject of their '?a a owl:Ontology' statement
   // additional statements could saw where the ontology was loaded from, like a web URL
 
-  //  test("Check for eponymous TURBO graph") {
-  //    val fxnRes = graphInRepo("https://raw.githubusercontent.com/PennTURBO/Turbo-Ontology/master/ontologies/turbo_merged.owl")
-  //    //    println(fxnRes)
-  //    assert(fxnRes)
-  //  }
+  test("Check for eponymous TURBO graph") {
+      val fxnRes = graphInRepo("https://raw.githubusercontent.com/PennTURBO/Turbo-Ontology/master/ontologies/turbo_merged.owl")
+      //    println(fxnRes)
+      assert(fxnRes)
+    }
 
   test("Check for Homo sapiens in expanded graph") {
     val fxnRes = classInGraph("http://purl.obolibrary.org/obo/NCBITaxon_9606", "http://www.itmat.upenn.edu/biobank/expanded")
