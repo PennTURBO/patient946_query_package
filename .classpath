@@ -1,29 +1,576 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" path="src/main/scala"/>
-	<classpathentry kind="src" path="src/test/scala"/>
-	<classpathentry kind="con" path="org.scala-ide.sdt.launching.SCALA_CONTAINER"/>
-	<classpathentry kind="lib" path="C:/Users/Mark Miller/.ivy2/cache/com.typesafe/config/bundles/config-1.3.4.jar" sourcepath="C:/Users/Mark Miller/.ivy2/cache/com.typesafe/config/srcs/config-1.3.4-sources.jar">
-		<attributes>
-			<attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\com.typesafe\config\docs\config-1.3.4-javadoc.jar!/"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Mark Miller/.ivy2/cache/org.scalatest/scalatest_2.12/bundles/scalatest_2.12-3.0.8.jar" sourcepath="C:/Users/Mark Miller/.ivy2/cache/org.scalatest/scalatest_2.12/srcs/scalatest_2.12-3.0.8-sources.jar">
-		<attributes>
-			<attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.scalatest\scalatest_2.12\docs\scalatest_2.12-3.0.8-javadoc.jar!/"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Mark Miller/.ivy2/cache/org.scalactic/scalactic_2.12/bundles/scalactic_2.12-3.0.8.jar" sourcepath="C:/Users/Mark Miller/.ivy2/cache/org.scalactic/scalactic_2.12/srcs/scalactic_2.12-3.0.8-sources.jar">
-		<attributes>
-			<attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.scalactic\scalactic_2.12\docs\scalactic_2.12-3.0.8-javadoc.jar!/"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Mark Miller/.ivy2/cache/org.scala-lang.modules/scala-xml_2.12/bundles/scala-xml_2.12-1.2.0.jar" sourcepath="C:/Users/Mark Miller/.ivy2/cache/org.scala-lang.modules/scala-xml_2.12/srcs/scala-xml_2.12-1.2.0-sources.jar">
-		<attributes>
-			<attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.scala-lang.modules\scala-xml_2.12\docs\scala-xml_2.12-1.2.0-javadoc.jar!/"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="src/main/resources"/>
-	<classpathentry kind="output" path="bin"/>
+  <classpathentry kind="src" path="src\main\scala"/>
+  <classpathentry kind="src" path="src\main\resources"/>
+  <classpathentry kind="src" path="src\test\scala"/>
+  <classpathentry kind="con" path="org.scala-ide.sdt.launching.SCALA_CONTAINER"></classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\com.typesafe\config\srcs\config-1.3.4-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\com.typesafe\config\bundles\config-1.3.4.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\com.typesafe\config\docs\config-1.3.4-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-runtime\jars\rdf4j-runtime-2.5.2.jar"/>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-config\srcs\rdf4j-config-2.5.2-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-config\jars\rdf4j-config-2.5.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-config\docs\rdf4j-config-2.5.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-util\srcs\rdf4j-util-2.5.2-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-util\jars\rdf4j-util-2.5.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-util\docs\rdf4j-util-2.5.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.slf4j\slf4j-api\srcs\slf4j-api-1.7.25-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.25.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.slf4j\slf4j-api\docs\slf4j-api-1.7.25-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\ch.qos.logback\logback-classic\srcs\logback-classic-1.1.11-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.11.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\ch.qos.logback\logback-classic\docs\logback-classic-1.1.11-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\ch.qos.logback\logback-core\srcs\logback-core-1.1.11-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.11.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\ch.qos.logback\logback-core\docs\logback-core-1.1.11-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-console\srcs\rdf4j-console-2.5.2-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-console\jars\rdf4j-console-2.5.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-console\docs\rdf4j-console-2.5.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-client\srcs\rdf4j-client-2.5.2-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-client\jars\rdf4j-client-2.5.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-client\docs\rdf4j-client-2.5.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.apache.httpcomponents\httpclient\srcs\httpclient-4.5.6-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.5.6.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.apache.httpcomponents\httpclient\docs\httpclient-4.5.6-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.apache.httpcomponents\httpcore\srcs\httpcore-4.4.10-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.4.10.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.apache.httpcomponents\httpcore\docs\httpcore-4.4.10-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\srcs\jackson-core-2.9.8-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.9.8.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\docs\jackson-core-2.9.8-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\com.opencsv\opencsv\srcs\opencsv-4.3.2-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\com.opencsv\opencsv\jars\opencsv-4.3.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\com.opencsv\opencsv\docs\opencsv-4.3.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.apache.commons\commons-lang3\srcs\commons-lang3-3.8.1-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.8.1.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.apache.commons\commons-lang3\docs\commons-lang3-3.8.1-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.apache.commons\commons-text\srcs\commons-text-1.3-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.apache.commons\commons-text\jars\commons-text-1.3.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.apache.commons\commons-text\docs\commons-text-1.3-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\commons-beanutils\commons-beanutils\srcs\commons-beanutils-1.9.3-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\commons-beanutils\commons-beanutils\jars\commons-beanutils-1.9.3.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\commons-beanutils\commons-beanutils\docs\commons-beanutils-1.9.3-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\commons-logging\commons-logging\srcs\commons-logging-1.2-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\commons-logging\commons-logging\docs\commons-logging-1.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\commons-collections\commons-collections\srcs\commons-collections-3.2.2-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\commons-collections\commons-collections\jars\commons-collections-3.2.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\commons-collections\commons-collections\docs\commons-collections-3.2.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.apache.commons\commons-collections4\srcs\commons-collections4-4.2-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.apache.commons\commons-collections4\jars\commons-collections4-4.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.apache.commons\commons-collections4\docs\commons-collections4-4.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\com.github.jsonld-java\jsonld-java\srcs\jsonld-java-0.12.3-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\com.github.jsonld-java\jsonld-java\bundles\jsonld-java-0.12.3.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\com.github.jsonld-java\jsonld-java\docs\jsonld-java-0.12.3-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\srcs\jackson-databind-2.9.8-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.9.8.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\docs\jackson-databind-2.9.8-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\srcs\jackson-annotations-2.9.8-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.9.8.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\docs\jackson-annotations-2.9.8-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\commons-io\commons-io\srcs\commons-io-2.6-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\commons-io\commons-io\jars\commons-io-2.6.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\commons-io\commons-io\docs\commons-io-2.6-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.apache.httpcomponents\httpclient-cache\srcs\httpclient-cache-4.5.6-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.apache.httpcomponents\httpclient-cache\jars\httpclient-cache-4.5.6.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.apache.httpcomponents\httpclient-cache\docs\httpclient-cache-4.5.6-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-storage\srcs\rdf4j-storage-2.5.2-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-storage\jars\rdf4j-storage-2.5.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-storage\docs\rdf4j-storage-2.5.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.mapdb\mapdb\srcs\mapdb-1.0.8-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.mapdb\mapdb\bundles\mapdb-1.0.8.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.mapdb\mapdb\docs\mapdb-1.0.8-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\com.google.guava\guava\srcs\guava-18.0-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\com.google.guava\guava\bundles\guava-18.0.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\com.google.guava\guava\docs\guava-18.0-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.locationtech.spatial4j\spatial4j\srcs\spatial4j-0.7-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.locationtech.spatial4j\spatial4j\bundles\spatial4j-0.7.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.locationtech.spatial4j\spatial4j\docs\spatial4j-0.7-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.locationtech.jts\jts-core\srcs\jts-core-1.15.1-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.locationtech.jts\jts-core\bundles\jts-core-1.15.1.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.locationtech.jts\jts-core\docs\jts-core-1.15.1-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.apache.lucene\lucene-core\srcs\lucene-core-6.6.1-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.apache.lucene\lucene-core\jars\lucene-core-6.6.1.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.apache.lucene\lucene-core\docs\lucene-core-6.6.1-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.apache.lucene\lucene-queries\srcs\lucene-queries-6.6.1-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.apache.lucene\lucene-queries\jars\lucene-queries-6.6.1.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.apache.lucene\lucene-queries\docs\lucene-queries-6.6.1-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.apache.lucene\lucene-highlighter\srcs\lucene-highlighter-6.6.1-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.apache.lucene\lucene-highlighter\jars\lucene-highlighter-6.6.1.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.apache.lucene\lucene-highlighter\docs\lucene-highlighter-6.6.1-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.apache.lucene\lucene-analyzers-common\srcs\lucene-analyzers-common-6.6.1-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.apache.lucene\lucene-analyzers-common\jars\lucene-analyzers-common-6.6.1.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.apache.lucene\lucene-analyzers-common\docs\lucene-analyzers-common-6.6.1-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.apache.lucene\lucene-join\srcs\lucene-join-6.6.1-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.apache.lucene\lucene-join\jars\lucene-join-6.6.1.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.apache.lucene\lucene-join\docs\lucene-join-6.6.1-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.apache.lucene\lucene-memory\srcs\lucene-memory-6.6.1-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.apache.lucene\lucene-memory\jars\lucene-memory-6.6.1.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.apache.lucene\lucene-memory\docs\lucene-memory-6.6.1-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.apache.lucene\lucene-queryparser\srcs\lucene-queryparser-6.6.1-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.apache.lucene\lucene-queryparser\jars\lucene-queryparser-6.6.1.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.apache.lucene\lucene-queryparser\docs\lucene-queryparser-6.6.1-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.apache.lucene\lucene-sandbox\srcs\lucene-sandbox-6.6.1-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.apache.lucene\lucene-sandbox\jars\lucene-sandbox-6.6.1.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.apache.lucene\lucene-sandbox\docs\lucene-sandbox-6.6.1-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.apache.lucene\lucene-spatial-extras\srcs\lucene-spatial-extras-6.6.1-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.apache.lucene\lucene-spatial-extras\jars\lucene-spatial-extras-6.6.1.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.apache.lucene\lucene-spatial-extras\docs\lucene-spatial-extras-6.6.1-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.apache.lucene\lucene-misc\srcs\lucene-misc-6.6.1-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.apache.lucene\lucene-misc\jars\lucene-misc-6.6.1.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.apache.lucene\lucene-misc\docs\lucene-misc-6.6.1-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.apache.lucene\lucene-spatial3d\srcs\lucene-spatial3d-6.6.1-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.apache.lucene\lucene-spatial3d\jars\lucene-spatial3d-6.6.1.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.apache.lucene\lucene-spatial3d\docs\lucene-spatial3d-6.6.1-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.apache.solr\solr-solrj\srcs\solr-solrj-6.6.1-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.apache.solr\solr-solrj\jars\solr-solrj-6.6.1.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.apache.solr\solr-solrj\docs\solr-solrj-6.6.1-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.apache.commons\commons-math3\srcs\commons-math3-3.5-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.apache.commons\commons-math3\jars\commons-math3-3.5.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.apache.commons\commons-math3\docs\commons-math3-3.5-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.apache.httpcomponents\httpmime\srcs\httpmime-4.5.6-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.apache.httpcomponents\httpmime\jars\httpmime-4.5.6.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.apache.httpcomponents\httpmime\docs\httpmime-4.5.6-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.apache.zookeeper\zookeeper\srcs\zookeeper-3.4.10-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.apache.zookeeper\zookeeper\jars\zookeeper-3.4.10.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.apache.zookeeper\zookeeper\docs\zookeeper-3.4.10-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.codehaus.woodstox\stax2-api\srcs\stax2-api-3.1.4-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.codehaus.woodstox\stax2-api\bundles\stax2-api-3.1.4.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.codehaus.woodstox\stax2-api\docs\stax2-api-3.1.4-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.codehaus.woodstox\woodstox-core-asl\srcs\woodstox-core-asl-4.4.1-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.codehaus.woodstox\woodstox-core-asl\jars\woodstox-core-asl-4.4.1.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.codehaus.woodstox\woodstox-core-asl\docs\woodstox-core-asl-4.4.1-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.noggit\noggit\srcs\noggit-0.6-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.noggit\noggit\jars\noggit-0.6.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.noggit\noggit\docs\noggit-0.6-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\commons-lang\commons-lang\srcs\commons-lang-2.6-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\commons-lang\commons-lang\jars\commons-lang-2.6.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\commons-lang\commons-lang\docs\commons-lang-2.6-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.jline\jline\srcs\jline-3.6.2-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.jline\jline\jars\jline-3.6.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.jline\jline\docs\jline-3.6.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\commons-cli\commons-cli\srcs\commons-cli-1.4-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\commons-cli\commons-cli\jars\commons-cli-1.4.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\commons-cli\commons-cli\docs\commons-cli-1.4-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-http-protocol\srcs\rdf4j-http-protocol-2.5.2-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-http-protocol\jars\rdf4j-http-protocol-2.5.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-http-protocol\docs\rdf4j-http-protocol-2.5.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-repository-api\srcs\rdf4j-repository-api-2.5.2-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-repository-api\jars\rdf4j-repository-api-2.5.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-repository-api\docs\rdf4j-repository-api-2.5.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-query\srcs\rdf4j-query-2.5.2-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-query\jars\rdf4j-query-2.5.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-query\docs\rdf4j-query-2.5.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-model\srcs\rdf4j-model-2.5.2-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-model\jars\rdf4j-model-2.5.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-model\docs\rdf4j-model-2.5.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-rio-api\srcs\rdf4j-rio-api-2.5.2-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-rio-api\jars\rdf4j-rio-api-2.5.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-rio-api\docs\rdf4j-rio-api-2.5.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-rio-ntriples\srcs\rdf4j-rio-ntriples-2.5.2-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-rio-ntriples\jars\rdf4j-rio-ntriples-2.5.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-rio-ntriples\docs\rdf4j-rio-ntriples-2.5.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-http-server-spring\srcs\rdf4j-http-server-spring-2.5.2-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-http-server-spring\jars\rdf4j-http-server-spring-2.5.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-http-server-spring\docs\rdf4j-http-server-spring-2.5.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\javax.servlet\jstl\srcs\jstl-1.2-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\javax.servlet\jstl\jars\jstl-1.2.jar"/>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.springframework\spring-webmvc\srcs\spring-webmvc-4.3.21.RELEASE-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.springframework\spring-webmvc\jars\spring-webmvc-4.3.21.RELEASE.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.springframework\spring-webmvc\docs\spring-webmvc-4.3.21.RELEASE-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.springframework\spring-aop\srcs\spring-aop-4.3.21.RELEASE-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.springframework\spring-aop\jars\spring-aop-4.3.21.RELEASE.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.springframework\spring-aop\docs\spring-aop-4.3.21.RELEASE-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.springframework\spring-beans\srcs\spring-beans-4.3.21.RELEASE-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.springframework\spring-beans\jars\spring-beans-4.3.21.RELEASE.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.springframework\spring-beans\docs\spring-beans-4.3.21.RELEASE-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.springframework\spring-core\srcs\spring-core-4.3.21.RELEASE-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.springframework\spring-core\jars\spring-core-4.3.21.RELEASE.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.springframework\spring-core\docs\spring-core-4.3.21.RELEASE-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.springframework\spring-context\srcs\spring-context-4.3.21.RELEASE-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.springframework\spring-context\jars\spring-context-4.3.21.RELEASE.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.springframework\spring-context\docs\spring-context-4.3.21.RELEASE-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.springframework\spring-expression\srcs\spring-expression-4.3.21.RELEASE-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.springframework\spring-expression\jars\spring-expression-4.3.21.RELEASE.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.springframework\spring-expression\docs\spring-expression-4.3.21.RELEASE-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.springframework\spring-web\srcs\spring-web-4.3.21.RELEASE-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.springframework\spring-web\jars\spring-web-4.3.21.RELEASE.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.springframework\spring-web\docs\spring-web-4.3.21.RELEASE-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-queryalgebra-evaluation\srcs\rdf4j-queryalgebra-evaluation-2.5.2-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-queryalgebra-evaluation\jars\rdf4j-queryalgebra-evaluation-2.5.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-queryalgebra-evaluation\docs\rdf4j-queryalgebra-evaluation-2.5.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-queryalgebra-model\srcs\rdf4j-queryalgebra-model-2.5.2-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-queryalgebra-model\jars\rdf4j-queryalgebra-model-2.5.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-queryalgebra-model\docs\rdf4j-queryalgebra-model-2.5.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-repository-sparql\srcs\rdf4j-repository-sparql-2.5.2-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-repository-sparql\jars\rdf4j-repository-sparql-2.5.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-repository-sparql\docs\rdf4j-repository-sparql-2.5.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-http-client\srcs\rdf4j-http-client-2.5.2-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-http-client\jars\rdf4j-http-client-2.5.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-http-client\docs\rdf4j-http-client-2.5.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-queryresultio-api\srcs\rdf4j-queryresultio-api-2.5.2-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-queryresultio-api\jars\rdf4j-queryresultio-api-2.5.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-queryresultio-api\docs\rdf4j-queryresultio-api-2.5.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-queryparser-api\srcs\rdf4j-queryparser-api-2.5.2-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-queryparser-api\jars\rdf4j-queryparser-api-2.5.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-queryparser-api\docs\rdf4j-queryparser-api-2.5.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-queryparser-sparql\srcs\rdf4j-queryparser-sparql-2.5.2-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-queryparser-sparql\jars\rdf4j-queryparser-sparql-2.5.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-queryparser-sparql\docs\rdf4j-queryparser-sparql-2.5.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-queryresultio-sparqlxml\srcs\rdf4j-queryresultio-sparqlxml-2.5.2-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-queryresultio-sparqlxml\jars\rdf4j-queryresultio-sparqlxml-2.5.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-queryresultio-sparqlxml\docs\rdf4j-queryresultio-sparqlxml-2.5.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-queryalgebra-geosparql\srcs\rdf4j-queryalgebra-geosparql-2.5.2-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-queryalgebra-geosparql\jars\rdf4j-queryalgebra-geosparql-2.5.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-queryalgebra-geosparql\docs\rdf4j-queryalgebra-geosparql-2.5.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-queryparser-serql\srcs\rdf4j-queryparser-serql-2.5.2-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-queryparser-serql\jars\rdf4j-queryparser-serql-2.5.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-queryparser-serql\docs\rdf4j-queryparser-serql-2.5.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-queryrender\srcs\rdf4j-queryrender-2.5.2-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-queryrender\jars\rdf4j-queryrender-2.5.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-queryrender\docs\rdf4j-queryrender-2.5.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-queryresultio-binary\srcs\rdf4j-queryresultio-binary-2.5.2-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-queryresultio-binary\jars\rdf4j-queryresultio-binary-2.5.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-queryresultio-binary\docs\rdf4j-queryresultio-binary-2.5.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-queryresultio-sparqljson\srcs\rdf4j-queryresultio-sparqljson-2.5.2-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-queryresultio-sparqljson\jars\rdf4j-queryresultio-sparqljson-2.5.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-queryresultio-sparqljson\docs\rdf4j-queryresultio-sparqljson-2.5.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-queryresultio-text\srcs\rdf4j-queryresultio-text-2.5.2-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-queryresultio-text\jars\rdf4j-queryresultio-text-2.5.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-queryresultio-text\docs\rdf4j-queryresultio-text-2.5.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-repository-contextaware\srcs\rdf4j-repository-contextaware-2.5.2-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-repository-contextaware\jars\rdf4j-repository-contextaware-2.5.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-repository-contextaware\docs\rdf4j-repository-contextaware-2.5.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-repository-dataset\srcs\rdf4j-repository-dataset-2.5.2-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-repository-dataset\jars\rdf4j-repository-dataset-2.5.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-repository-dataset\docs\rdf4j-repository-dataset-2.5.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-repository-sail\srcs\rdf4j-repository-sail-2.5.2-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-repository-sail\jars\rdf4j-repository-sail-2.5.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-repository-sail\docs\rdf4j-repository-sail-2.5.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-sail-api\srcs\rdf4j-sail-api-2.5.2-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-sail-api\jars\rdf4j-sail-api-2.5.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-sail-api\docs\rdf4j-sail-api-2.5.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-rio-trig\srcs\rdf4j-rio-trig-2.5.2-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-rio-trig\jars\rdf4j-rio-trig-2.5.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-rio-trig\docs\rdf4j-rio-trig-2.5.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-rio-turtle\srcs\rdf4j-rio-turtle-2.5.2-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-rio-turtle\jars\rdf4j-rio-turtle-2.5.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-rio-turtle\docs\rdf4j-rio-turtle-2.5.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-repository-event\srcs\rdf4j-repository-event-2.5.2-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-repository-event\jars\rdf4j-repository-event-2.5.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-repository-event\docs\rdf4j-repository-event-2.5.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-repository-http\srcs\rdf4j-repository-http-2.5.2-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-repository-http\jars\rdf4j-repository-http-2.5.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-repository-http\docs\rdf4j-repository-http-2.5.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-repository-manager\srcs\rdf4j-repository-manager-2.5.2-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-repository-manager\jars\rdf4j-repository-manager-2.5.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-repository-manager\docs\rdf4j-repository-manager-2.5.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-rio-binary\srcs\rdf4j-rio-binary-2.5.2-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-rio-binary\jars\rdf4j-rio-binary-2.5.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-rio-binary\docs\rdf4j-rio-binary-2.5.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-rio-datatypes\srcs\rdf4j-rio-datatypes-2.5.2-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-rio-datatypes\jars\rdf4j-rio-datatypes-2.5.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-rio-datatypes\docs\rdf4j-rio-datatypes-2.5.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-rio-jsonld\srcs\rdf4j-rio-jsonld-2.5.2-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-rio-jsonld\jars\rdf4j-rio-jsonld-2.5.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-rio-jsonld\docs\rdf4j-rio-jsonld-2.5.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-rio-languages\srcs\rdf4j-rio-languages-2.5.2-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-rio-languages\jars\rdf4j-rio-languages-2.5.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-rio-languages\docs\rdf4j-rio-languages-2.5.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-rio-n3\srcs\rdf4j-rio-n3-2.5.2-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-rio-n3\jars\rdf4j-rio-n3-2.5.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-rio-n3\docs\rdf4j-rio-n3-2.5.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-rio-nquads\srcs\rdf4j-rio-nquads-2.5.2-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-rio-nquads\jars\rdf4j-rio-nquads-2.5.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-rio-nquads\docs\rdf4j-rio-nquads-2.5.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-rio-rdfjson\srcs\rdf4j-rio-rdfjson-2.5.2-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-rio-rdfjson\jars\rdf4j-rio-rdfjson-2.5.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-rio-rdfjson\docs\rdf4j-rio-rdfjson-2.5.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-rio-rdfxml\srcs\rdf4j-rio-rdfxml-2.5.2-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-rio-rdfxml\jars\rdf4j-rio-rdfxml-2.5.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-rio-rdfxml\docs\rdf4j-rio-rdfxml-2.5.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-rio-trix\srcs\rdf4j-rio-trix-2.5.2-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-rio-trix\jars\rdf4j-rio-trix-2.5.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-rio-trix\docs\rdf4j-rio-trix-2.5.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-sail-base\srcs\rdf4j-sail-base-2.5.2-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-sail-base\jars\rdf4j-sail-base-2.5.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-sail-base\docs\rdf4j-sail-base-2.5.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-sail-inferencer\srcs\rdf4j-sail-inferencer-2.5.2-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-sail-inferencer\jars\rdf4j-sail-inferencer-2.5.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-sail-inferencer\docs\rdf4j-sail-inferencer-2.5.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-sail-model\srcs\rdf4j-sail-model-2.5.2-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-sail-model\jars\rdf4j-sail-model-2.5.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-sail-model\docs\rdf4j-sail-model-2.5.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-sail-federation\srcs\rdf4j-sail-federation-2.5.2-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-sail-federation\jars\rdf4j-sail-federation-2.5.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-sail-federation\docs\rdf4j-sail-federation-2.5.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-sail-elasticsearch\srcs\rdf4j-sail-elasticsearch-2.5.2-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-sail-elasticsearch\jars\rdf4j-sail-elasticsearch-2.5.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-sail-elasticsearch\docs\rdf4j-sail-elasticsearch-2.5.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-sail-lucene-api\srcs\rdf4j-sail-lucene-api-2.5.2-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-sail-lucene-api\jars\rdf4j-sail-lucene-api-2.5.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-sail-lucene-api\docs\rdf4j-sail-lucene-api-2.5.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-sail-lucene\srcs\rdf4j-sail-lucene-2.5.2-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-sail-lucene\jars\rdf4j-sail-lucene-2.5.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-sail-lucene\docs\rdf4j-sail-lucene-2.5.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-sail-solr\srcs\rdf4j-sail-solr-2.5.2-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-sail-solr\jars\rdf4j-sail-solr-2.5.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-sail-solr\docs\rdf4j-sail-solr-2.5.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-sail-memory\srcs\rdf4j-sail-memory-2.5.2-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-sail-memory\jars\rdf4j-sail-memory-2.5.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-sail-memory\docs\rdf4j-sail-memory-2.5.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-sail-nativerdf\srcs\rdf4j-sail-nativerdf-2.5.2-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-sail-nativerdf\jars\rdf4j-sail-nativerdf-2.5.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-sail-nativerdf\docs\rdf4j-sail-nativerdf-2.5.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-sail-spin\srcs\rdf4j-sail-spin-2.5.2-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-sail-spin\jars\rdf4j-sail-spin-2.5.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-sail-spin\docs\rdf4j-sail-spin-2.5.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-spin\srcs\rdf4j-spin-2.5.2-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-spin\jars\rdf4j-spin-2.5.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-spin\docs\rdf4j-spin-2.5.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-lucene-spin\srcs\rdf4j-lucene-spin-2.5.2-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-lucene-spin\jars\rdf4j-lucene-spin-2.5.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.eclipse.rdf4j\rdf4j-lucene-spin\docs\rdf4j-lucene-spin-2.5.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\commons-codec\commons-codec\srcs\commons-codec-1.11-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.11.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\commons-codec\commons-codec\docs\commons-codec-1.11-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.slf4j\jcl-over-slf4j\srcs\jcl-over-slf4j-1.7.25-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.25.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.slf4j\jcl-over-slf4j\docs\jcl-over-slf4j-1.7.25-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\taglibs\standard\srcs\standard-1.1.2-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\taglibs\standard\jars\standard-1.1.2.jar"/>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.scalatest\scalatest_2.12\srcs\scalatest_2.12-3.0.8-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.scalatest\scalatest_2.12\bundles\scalatest_2.12-3.0.8.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.scalatest\scalatest_2.12\docs\scalatest_2.12-3.0.8-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.scalactic\scalactic_2.12\srcs\scalactic_2.12-3.0.8-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.scalactic\scalactic_2.12\bundles\scalactic_2.12-3.0.8.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.scalactic\scalactic_2.12\docs\scalactic_2.12-3.0.8-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\Mark Miller\.ivy2\cache\org.scala-lang.modules\scala-xml_2.12\srcs\scala-xml_2.12-1.2.0-sources.jar" kind="lib" path="C:\Users\Mark Miller\.ivy2\cache\org.scala-lang.modules\scala-xml_2.12\bundles\scala-xml_2.12-1.2.0.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\Mark Miller\.ivy2\cache\org.scala-lang.modules\scala-xml_2.12\docs\scala-xml_2.12-1.2.0-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+  <classpathentry kind="output" path="bin"/>
 </classpath>

@@ -10,7 +10,8 @@ lazy val root = (project in file("."))
   .settings(
     name := "patient946_query_package",
     libraryDependencies += scalaTest % Test,
-	libraryDependencies += "com.typesafe" % "config" % "1.3.4"
+	libraryDependencies += "com.typesafe" % "config" % "1.3.4",
+	libraryDependencies += "org.eclipse.rdf4j" % "rdf4j-runtime" % "2.5.2"
   )
 
 // See https://www.scala-sbt.org/1.x/docs/Using-Sonatype.html for instructions on how to publish to Sonatype.

@@ -12,3 +12,10 @@ run
 reload
 eclipse with-source=true
 test
+run
+evicted
+run
+test
+reload
+eclipse with-source=true
+test
