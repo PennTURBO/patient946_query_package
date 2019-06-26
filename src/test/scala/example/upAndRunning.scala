@@ -1,14 +1,14 @@
 package example
 
-import org.scalatest.FunSuite
+//import org.eclipse.rdf4j.model.impl._
+//import org.eclipse.rdf4j.model.vocabulary.FOAF
+//import org.eclipse.rdf4j.model.vocabulary.RDF
+//import org.eclipse.rdf4j.repository.manager.RemoteRepositoryManager
+//import org.eclipse.rdf4j.repository.sparql._
 import com.typesafe.config.ConfigFactory
-import org.eclipse.rdf4j.model.impl._
-import org.eclipse.rdf4j.model.vocabulary.RDF
-import org.eclipse.rdf4j.model.vocabulary.FOAF
-import org.eclipse.rdf4j.repository.manager.RemoteRepositoryManager
-import org.eclipse.rdf4j.repository.sparql._
 import org.eclipse.rdf4j.query.QueryLanguage
 import org.eclipse.rdf4j.repository.sparql.SPARQLRepository
+import org.scalatest.FunSuite
 
 class upAndRunning extends FunSuite {
 
@@ -36,33 +36,34 @@ class upAndRunning extends FunSuite {
   val SparqlRepo = new SPARQLRepository(endpointValue)
   SparqlRepo.initialize()
 
-  var con = SparqlRepo.getConnection()
+  val con = SparqlRepo.getConnection()
 
-  var queryString = "SELECT ?x ?p ?y WHERE { ?x ?p ?y } limit 30 "
-  var tupleQuery = con.prepareTupleQuery(QueryLanguage.SPARQL, queryString)
-  var result = tupleQuery.evaluate()
+  //  var queryString = "SELECT ?x ?p ?y WHERE { ?x ?p ?y } limit 30 "
+  //  var tupleQuery = con.prepareTupleQuery(QueryLanguage.SPARQL, queryString)
+  //  var tuplesResult = tupleQuery.evaluate()
+  //
+  //  while (tuplesResult.hasNext()) { // iterate over the result
+  //    val bindingSet = tuplesResult.next()
+  //    val valueOfX = bindingSet.getValue("x")
+  //    val valueOfP = bindingSet.getValue("p")
+  //    val valueOfY = bindingSet.getValue("y")
+  //    val toPrint = valueOfX + " " + valueOfP + " " + valueOfY
+  //    println(toPrint)
+  //  }
 
-  while (result.hasNext()) { // iterate over the result
-    val bindingSet = result.next()
-    val valueOfX = bindingSet.getValue("x")
-    val valueOfP = bindingSet.getValue("p")
-    val valueOfY = bindingSet.getValue("y")
-    val toPrint = valueOfX + " " + valueOfP + " " + valueOfY
-    println(toPrint)
+  var expectedGraph = "http://www.itmat.upenn.edu/biobank/expanded"
+  var queryString = " ask where { graph <" + expectedGraph + "> { ?s ?p ?o } } "
+  var booleanQuery = con.prepareBooleanQuery(QueryLanguage.SPARQL, queryString)
+  var booleanResult = booleanQuery.evaluate()
+  println(booleanResult)
+
+  test("named graph " + expectedGraph + " is present") {
+    assert(booleanResult)
   }
 
-  queryString = " ask where { graph <http://www.itmat.upenn.edu/biobank/expanded> { ?s ?p ?o } } "
-  tupleQuery = con.prepareTupleQuery(QueryLanguage.SPARQL, queryString)
-  result = tupleQuery.evaluate()
-  print(result)
-
-  result.close
+  //  tuplesResult.close
+  //  booleanResult.close
   con.close
   SparqlRepo.shutDown
-
-  test("1 plus 2 equals 3") {
-    val x = 1 + 2
-    assert(x == 3)
-  }
 
 }
