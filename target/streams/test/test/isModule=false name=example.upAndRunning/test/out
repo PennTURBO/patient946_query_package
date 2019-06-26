@@ -1,5 +1,7 @@
 [0m[[0m[0minfo[0m] [0m[0m[32mupAndRunning:[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Check for expanded graph[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- Check for eponymous TURBO graph *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  fxnRes was false (upAndRunning.scala:122)[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Check for Homo sapiens in expanded graph[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Check for CRID subclass in expanded graph[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Check for CRID subclass denoting a person in the expanded graph[0m[0m
@@ -11,4 +13,16 @@
 [0m[[0m[0minfo[0m] [0m[0m[32m- Check for start of neonate stage PROCESS BOUNDARY in expanded graph[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Check for date of birth about some start of neonate stage in the expanded graph.[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Check for date of birth about some start of neonate stage on which a person was born (in the expanded graph.)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Check for date of birth about some start of neonate stage on which the '00002c66-a365-4e88-8e80-d52bcad4869e' person was born (in the expanded graph.)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Check for a date of birth about some start of neonate stage on which the '00002c66-a365-4e88-8e80-d52bcad4869e' person was born (in the expanded graph.)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Check for a date of birth, with date value 1916-02-02, about some start of neonate stage on which the '00002c66-a365-4e88-8e80-d52bcad4869e' person was born (in the expanded graph.)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Check for gender identitiy datum subclass in expanded graph[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Check for a gender identitiy datum subclass, about the '00002c66-a365-4e88-8e80-d52bcad4869e' person (in the expanded graph.)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Check for racial identitiy datum subclass in expanded graph[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Check for black racial identitiy datum in expanded graph[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Check for a black racial identitiy datum about the '00002c66-a365-4e88-8e80-d52bcad4869e' person (in the expanded graph.)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Check for patient role in expanded graph[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- patient role inheres in, is role of, or is borne by person '00002c66-a365-4e88-8e80-d52bcad4869e' (in the expanded graph.)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Check for health care encounter in expanded graph[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- patient role associated with person '00002c66-a365-4e88-8e80-d52bcad4869e' is realized in a health care encounter(in the expanded graph.)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- person '00002c66-a365-4e88-8e80-d52bcad4869e' participates in the health care encounter that realizes the patient's role (in the expanded graph.)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- here, encounters are denoted by CRIDs (in the expanded graph.)[0m[0m
