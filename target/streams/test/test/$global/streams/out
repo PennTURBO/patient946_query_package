@@ -9,3 +9,4 @@
 [0m[[0m[0mdebug[0m] [0m[0m	example.HelloSpec[0m
 [0m[[0m[31merror[0m] [0m[0mFailed tests:[0m
 [0m[[0m[31merror[0m] [0m[0m	example.upAndRunning[0m
+[0m[[0m[31merror[0m] [0m[0m(Test / [31mtest[0m) sbt.TestsFailedException: Tests unsuccessful[0m

@@ -34,11 +34,13 @@ import com.typesafe.config.Config
 // 17616 / 71ed95de-8d50-4cfe-8aaa-a4d26d859215
 // 15512 / d346249f-c84a-442e-9c73-6315838d543c
 
-// need to try this out in some higher levels of GraphDB reasoning for inverse properties and subproperties etc.
-
-// make a prefix block?
+// assume RDFS+ reasoning in expanded graph?
 
 // make a prefix alias hack block?
+
+// factor out ontology graph name
+
+// import rxnorm and cvx
 
 class upAndRunning extends FunSuite with BeforeAndAfter {
 
@@ -47,9 +49,53 @@ class upAndRunning extends FunSuite with BeforeAndAfter {
   var SparqlRepo: SPARQLRepository = null
   var con: RepositoryConnection = null
 
+  val prefixesAliases = """
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX dc11: <http://purl.org/dc/elements/1.1/>
+PREFIX efo: <http://www.ebi.ac.uk/efo/>
+PREFIX faldo: <http://biohackathon.org/resource/faldo#>
+PREFIX fn: <http://www.w3.org/2005/xpath-functions#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX go: <http://purl.obolibrary.org/obo/go#>
+PREFIX mydata: <http://example.com/resource/>
+PREFIX ncbitaxon: <http://purl.obolibrary.org/obo/ncbitaxon#>
+PREFIX nci: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
+PREFIX ontoneo: <http://purl.obolibrary.org/obo/ontoneo/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX pmbb: <http://www.itmat.upenn.edu/biobank/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ro: <http://www.obofoundry.org/ro/ro.owl#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX snomed: <http://purl.bioontology.org/ontology/SNOMEDCT/>
+PREFIX terms: <http://purl.org/dc/terms/>
+PREFIX Thesaurus: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#>
+PREFIX turbo: <http://transformunify.org/ontologies/>
+PREFIX umls: <http://bioportal.bioontology.org/ontologies/umls/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rxnorm: <http://purl.bioontology.org/ontology/RXNORM/>
+PREFIX cvx: <http://purl.bioontology.org/ontology/CVX/>
+PREFIX turboOntGraph: <https://raw.githubusercontent.com/PennTURBO/Turbo-Ontology/master/ontologies/turbo_merged.owl>
+PREFIX expandedGraph: <http://www.itmat.upenn.edu/biobank/expanded>
+PREFIX human: <http://purl.obolibrary.org/obo/NCBITaxon_9606> 
+PREFIX crid: <http://purl.obolibrary.org/obo/IAO_0000578>   
+PREFIX symbol: <http://purl.obolibrary.org/obo/IAO_0000028>   
+PREFIX denotes: <http://purl.obolibrary.org/obo/IAO_0000219>   
+PREFIX hasRepresentation: <http://transformunify.org/ontologies/TURBO_0010094>   
+PREFIX partOf: <http://purl.obolibrary.org/obo/BFO_0000050>    
+PREFIX hasPart: <http://purl.obolibrary.org/obo/BFO_0000051>   
+PREFIX hce: <http://purl.obolibrary.org/obo/OGMS_0000097>
+PREFIX participatesIn: <http://purl.obolibrary.org/obo/RO_0000056>
+PREFIX processBoundary: <http://purl.obolibrary.org/obo/BFO_0000035>
+PREFIX starts: <http://purl.obolibrary.org/obo/RO_0002223>
+    """
+
   before {
     parsedConfig = ConfigFactory.parseResources("defaults.conf")
     endpointValue = parsedConfig.getString("conf.sparqlEndpoint")
+    //    println(endpointValue)
     SparqlRepo = new SPARQLRepository(endpointValue)
     SparqlRepo.initialize()
     con = SparqlRepo.getConnection()
@@ -80,12 +126,11 @@ class upAndRunning extends FunSuite with BeforeAndAfter {
     booleanResult
   }
 
-  // fix this to use the TURBO autonym/epinym
   def superClassInGraph(myClass: String, myGraph: String): Boolean = {
     //    println(myGraph)
     val queryString = """
   ask where {
-      graph <http://www.itmat.upenn.edu/biobank/ontology> {
+      graph <https://raw.githubusercontent.com/PennTURBO/Turbo-Ontology/master/ontologies/turbo_merged.owl> {
           ?t <http://www.w3.org/2000/01/rdf-schema#subClassOf>* <""" + myClass + """>
       }
       graph <""" + myGraph + """> {
@@ -101,9 +146,10 @@ class upAndRunning extends FunSuite with BeforeAndAfter {
   }
 
   def arbitraryAsk(myAsk: String): Boolean = {
-    //    println(myGraph)
-    //    println(myAsk)
-    val booleanQuery = con.prepareBooleanQuery(QueryLanguage.SPARQL, myAsk)
+    //        println(myGraph)
+    val withPrefixes = prefixesAliases + myAsk
+    println(withPrefixes)
+    val booleanQuery = con.prepareBooleanQuery(QueryLanguage.SPARQL, withPrefixes)
     val booleanResult = booleanQuery.evaluate()
     //    println(booleanResult)
     booleanResult
@@ -138,7 +184,7 @@ class upAndRunning extends FunSuite with BeforeAndAfter {
   test("Check for CRID subclass denoting a person in the expanded graph") {
     val myAsk = """
               ask where {
-      graph <http://www.itmat.upenn.edu/biobank/ontology> {
+      graph <https://raw.githubusercontent.com/PennTURBO/Turbo-Ontology/master/ontologies/turbo_merged.owl> {
           ?cridType <http://www.w3.org/2000/01/rdf-schema#subClassOf>* <http://purl.obolibrary.org/obo/IAO_0000578>
       }
       graph <http://www.itmat.upenn.edu/biobank/expanded> {
@@ -161,7 +207,7 @@ class upAndRunning extends FunSuite with BeforeAndAfter {
   test("Check for symbol subclass part of CRID subclass in the expanded graph") {
     val myAsk = """
   ask where {
-      graph <http://www.itmat.upenn.edu/biobank/ontology> {
+      graph <https://raw.githubusercontent.com/PennTURBO/Turbo-Ontology/master/ontologies/turbo_merged.owl> {
           ?cridType <http://www.w3.org/2000/01/rdf-schema#subClassOf>* <http://purl.obolibrary.org/obo/IAO_0000578> .
           ?symbolType <http://www.w3.org/2000/01/rdf-schema#subClassOf>* <http://purl.obolibrary.org/obo/IAO_0000028> .
       }
@@ -189,7 +235,7 @@ class upAndRunning extends FunSuite with BeforeAndAfter {
   test("Check for CRID subclass, with symbol subclass part, denoting a person in the expanded graph") {
     val myAsk = """
   ask where {
-      graph <http://www.itmat.upenn.edu/biobank/ontology> {
+      graph <https://raw.githubusercontent.com/PennTURBO/Turbo-Ontology/master/ontologies/turbo_merged.owl> {
           ?cridType <http://www.w3.org/2000/01/rdf-schema#subClassOf>* <http://purl.obolibrary.org/obo/IAO_0000578> .
           ?symbolType <http://www.w3.org/2000/01/rdf-schema#subClassOf>* <http://purl.obolibrary.org/obo/IAO_0000028> .
       }
@@ -220,7 +266,7 @@ class upAndRunning extends FunSuite with BeforeAndAfter {
   test("Check for CRID subclass, with symbol subclass part, denoting a person in the expanded graph. Symbol should have a value of 00002c66-a365-4e88-8e80-d52bcad4869e") {
     val myAsk = """
   ask where {
-      graph <http://www.itmat.upenn.edu/biobank/ontology> {
+      graph <https://raw.githubusercontent.com/PennTURBO/Turbo-Ontology/master/ontologies/turbo_merged.owl> {
           ?cridType <http://www.w3.org/2000/01/rdf-schema#subClassOf>* <http://purl.obolibrary.org/obo/IAO_0000578> .
           ?symbolType <http://www.w3.org/2000/01/rdf-schema#subClassOf>* <http://purl.obolibrary.org/obo/IAO_0000028> .
       }
@@ -286,7 +332,7 @@ class upAndRunning extends FunSuite with BeforeAndAfter {
   test("Check for a date of birth about some start of neonate stage on which the '00002c66-a365-4e88-8e80-d52bcad4869e' person was born (in the expanded graph.)") {
     val myAsk = """
   ask where {
-      graph <http://www.itmat.upenn.edu/biobank/ontology> {
+      graph <https://raw.githubusercontent.com/PennTURBO/Turbo-Ontology/master/ontologies/turbo_merged.owl> {
           ?cridType <http://www.w3.org/2000/01/rdf-schema#subClassOf>* <http://purl.obolibrary.org/obo/IAO_0000578> .
           ?symbolType <http://www.w3.org/2000/01/rdf-schema#subClassOf>* <http://purl.obolibrary.org/obo/IAO_0000028> .
       }
@@ -317,7 +363,7 @@ class upAndRunning extends FunSuite with BeforeAndAfter {
   test("Check for a date of birth, with date value 1916-02-02, about some start of neonate stage on which the '00002c66-a365-4e88-8e80-d52bcad4869e' person was born (in the expanded graph.)") {
     val myAsk = """
   ask where {
-      graph <http://www.itmat.upenn.edu/biobank/ontology> {
+      graph <https://raw.githubusercontent.com/PennTURBO/Turbo-Ontology/master/ontologies/turbo_merged.owl> {
           ?cridType <http://www.w3.org/2000/01/rdf-schema#subClassOf>* <http://purl.obolibrary.org/obo/IAO_0000578> .
           ?symbolType <http://www.w3.org/2000/01/rdf-schema#subClassOf>* <http://purl.obolibrary.org/obo/IAO_0000028> .
           ?p <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>* <http://transformunify.org/ontologies/TURBO_0010094> .
@@ -357,7 +403,7 @@ class upAndRunning extends FunSuite with BeforeAndAfter {
   test("Check for a gender identitiy datum subclass, about the '00002c66-a365-4e88-8e80-d52bcad4869e' person (in the expanded graph.)") {
     val myAsk = """
   ask where {
-      graph <http://www.itmat.upenn.edu/biobank/ontology> {
+      graph <https://raw.githubusercontent.com/PennTURBO/Turbo-Ontology/master/ontologies/turbo_merged.owl> {
           ?cridType <http://www.w3.org/2000/01/rdf-schema#subClassOf>* <http://purl.obolibrary.org/obo/IAO_0000578> .
           ?symbolType <http://www.w3.org/2000/01/rdf-schema#subClassOf>* <http://purl.obolibrary.org/obo/IAO_0000028> .
           ?gendSexDataType <http://www.w3.org/2000/01/rdf-schema#subClassOf>* <http://purl.obolibrary.org/obo/OMRSE_00000133> .
@@ -397,7 +443,7 @@ class upAndRunning extends FunSuite with BeforeAndAfter {
   test("Check for a black racial identitiy datum about the '00002c66-a365-4e88-8e80-d52bcad4869e' person (in the expanded graph.)") {
     val myAsk = """
   ask where {
-      graph <http://www.itmat.upenn.edu/biobank/ontology> {
+      graph <https://raw.githubusercontent.com/PennTURBO/Turbo-Ontology/master/ontologies/turbo_merged.owl> {
           ?cridType <http://www.w3.org/2000/01/rdf-schema#subClassOf>* <http://purl.obolibrary.org/obo/IAO_0000578> .
           ?symbolType <http://www.w3.org/2000/01/rdf-schema#subClassOf>* <http://purl.obolibrary.org/obo/IAO_0000028> .
       }
@@ -431,7 +477,7 @@ class upAndRunning extends FunSuite with BeforeAndAfter {
   test("patient role inheres in, is role of, or is borne by person '00002c66-a365-4e88-8e80-d52bcad4869e' (in the expanded graph.)") {
     val myAsk = """
 ask where {
-    graph <http://www.itmat.upenn.edu/biobank/ontology> {
+    graph <https://raw.githubusercontent.com/PennTURBO/Turbo-Ontology/master/ontologies/turbo_merged.owl> {
         ?cridType <http://www.w3.org/2000/01/rdf-schema#subClassOf>* <http://purl.obolibrary.org/obo/IAO_0000578> .
         ?symbolType <http://www.w3.org/2000/01/rdf-schema#subClassOf>* <http://purl.obolibrary.org/obo/IAO_0000028> .
     }
@@ -477,7 +523,7 @@ ask where {
   test("patient role associated with person '00002c66-a365-4e88-8e80-d52bcad4869e' is realized in a health care encounter(in the expanded graph.)") {
     val myAsk = """
 ask where {
-    graph <http://www.itmat.upenn.edu/biobank/ontology> {
+    graph <https://raw.githubusercontent.com/PennTURBO/Turbo-Ontology/master/ontologies/turbo_merged.owl> {
         ?cridType <http://www.w3.org/2000/01/rdf-schema#subClassOf>* <http://purl.obolibrary.org/obo/IAO_0000578> .
         ?symbolType <http://www.w3.org/2000/01/rdf-schema#subClassOf>* <http://purl.obolibrary.org/obo/IAO_0000028> .
     }
@@ -520,7 +566,7 @@ ask where {
   test("person '00002c66-a365-4e88-8e80-d52bcad4869e' participates in the health care encounter that realizes the patient's role (in the expanded graph.)") {
     val myAsk = """
 ask where {
-    graph <http://www.itmat.upenn.edu/biobank/ontology> {
+    graph <https://raw.githubusercontent.com/PennTURBO/Turbo-Ontology/master/ontologies/turbo_merged.owl> {
         ?cridType <http://www.w3.org/2000/01/rdf-schema#subClassOf>* <http://purl.obolibrary.org/obo/IAO_0000578> .
         ?symbolType <http://www.w3.org/2000/01/rdf-schema#subClassOf>* <http://purl.obolibrary.org/obo/IAO_0000028> .
     }
@@ -564,7 +610,7 @@ ask where {
   test("here, encounters are denoted by CRIDs (in the expanded graph.)") {
     val myAsk = """
 ask where {
-    graph <http://www.itmat.upenn.edu/biobank/ontology> {
+    graph <https://raw.githubusercontent.com/PennTURBO/Turbo-Ontology/master/ontologies/turbo_merged.owl> {
         ?EcridType <http://www.w3.org/2000/01/rdf-schema#subClassOf>* <http://purl.obolibrary.org/obo/IAO_0000578> .
         # ?EsymbolType <http://www.w3.org/2000/01/rdf-schema#subClassOf>* <http://purl.obolibrary.org/obo/IAO_0000028> .
     }
@@ -577,62 +623,102 @@ ask where {
     assert(fxnRes)
   }
 
-  //    test("person '00002c66-a365-4e88-8e80-d52bcad4869e' participates in a CRID-denoted health care encounter  (in the expanded graph.)") {
-  //    val myAsk = """
-  //ask where {
-  //    graph <http://www.itmat.upenn.edu/biobank/ontology> {
-  //        ?pcridType <http://www.w3.org/2000/01/rdf-schema#subClassOf>* <http://purl.obolibrary.org/obo/IAO_0000578> .
-  //        ?psymbolType <http://www.w3.org/2000/01/rdf-schema#subClassOf>* <http://purl.obolibrary.org/obo/IAO_0000028> .
-  //        ?ecridType <http://www.w3.org/2000/01/rdf-schema#subClassOf>* <http://purl.obolibrary.org/obo/IAO_0000578> .
-  //        ?esymbolType <http://www.w3.org/2000/01/rdf-schema#subClassOf>* <http://purl.obolibrary.org/obo/IAO_0000028> .
-  //    }
-  //    graph <http://www.itmat.upenn.edu/biobank/expanded> {
-  //        ?pcridInst a ?pcridType ;
-  //                  <http://purl.obolibrary.org/obo/IAO_0000219> ?personInst .
-  //        ?psymbolInst a ?psymbolType ;
-  //                    <http://transformunify.org/ontologies/TURBO_0010094> "00002c66-a365-4e88-8e80-d52bcad4869e"
-  //        {
-  //            {
-  //                ?psymbolInst <http://purl.obolibrary.org/obo/BFO_0000050> ?pcridInst .
-  //            }
-  //            union {
-  //                ?pcridInst <http://purl.obolibrary.org/obo/BFO_0000051> ?psymbolInst .
-  //            }
-  //        }
-  //                ?ecridInst a ?ecridType ;
-  //                  <http://purl.obolibrary.org/obo/IAO_0000219> ?hce .
-  //        ?esymbolInst a ?esymbolType ;
-  //                    <http://transformunify.org/ontologies/TURBO_0010094> "00002c66-a365-4e88-8e80-d52bcad4869e"
-  //        {
-  //            {
-  //                ?psymbolInst <http://purl.obolibrary.org/obo/BFO_0000050> ?pcridInst .
-  //            }
-  //            union {
-  //                ?pcridInst <http://purl.obolibrary.org/obo/BFO_0000051> ?psymbolInst .
-  //            }
-  //        }
-  //        ?personInst a <http://purl.obolibrary.org/obo/NCBITaxon_9606> ;
-  //            <http://purl.obolibrary.org/obo/RO_0000056> ?hce .
-  //        ?roleInst a <http://purl.obolibrary.org/obo/OBI_0000093> ;
-  //            <http://purl.obolibrary.org/obo/BFO_0000054> ?hce .
-  //        ?hce a <http://purl.obolibrary.org/obo/OGMS_0000097> .
-  //        {
-  //            {
-  //                ?personInst <http://purl.obolibrary.org/obo/RO_0000087> ?roleInst .
-  //            }
-  //            union {
-  //                ?roleInst <http://purl.obolibrary.org/obo/RO_0000052> ?personInst .
-  //            }
-  //            union {
-  //                ?roleInst <http://purl.obolibrary.org/obo/RO_0000080>  ?personInst .
-  //            }
-  //        }
-  //    }
-  //}"""
-  //    val fxnRes = arbitraryAsk(myAsk)
-  //    assert(fxnRes)
-  //  }
+  // start writing the tests with the assumption that RDFS+ reasoning has been completed
+  // start using prefix and alias block
+  // differentiate patient and encounter crids and parts
+
+  //whoa, takes ~ 30 seconds!
+
+  test("WITH PREFIXES and aliases, symb part of crid") {
+    val myAsk = """
+ask where {
+    graph turboOntGraph: {
+        ?pCridType rdfs:subClassOf* crid: .
+        ?pSymbolType rdfs:subClassOf* symbol: .
+        ?eCridType rdfs:subClassOf* crid: .
+#        ?eSymbolType rdfs:subClassOf* symbol: .
+    }
+    graph expandedGraph: {
+        ?pCridInst a ?pCridType ;
+                   denotes: ?personInst .
+        ?personInst a human: ;
+                    participatesIn: ?encInst .
+        ?pSymbolInst a ?pSymbolType ;
+                     partOf: ?pCridInst ;
+                     hasRepresentation: "00002c66-a365-4e88-8e80-d52bcad4869e" .
+        ?encInst a hce: .
+        ?eCridInst a ?eCridType ;
+                   denotes: ?encInst .
+    }
+}"""
+    val fxnRes = arbitraryAsk(myAsk)
+    assert(fxnRes)
+  }
+
+
+  test("WITH PREFIXES and aliases, crid has symbol part with two expected representative values") {
+    val myAsk = """
+ask  where {
+    graph expandedGraph: {
+        values ?eSv {
+            "71ed95de-8d50-4cfe-8aaa-a4d26d859215" 
+            "d346249f-c84a-442e-9c73-6315838d543c" 
+        }
+        ?pSymbolInst 
+            hasRepresentation: 
+                "00002c66-a365-4e88-8e80-d52bcad4869e" ;
+                                                       a ?pSymbolType ;
+                                                       partOf: ?pCridInst .
+        ?eSymbolInst hasRepresentation: ?eSv  ;
+                     a ?eSymbolType ;
+                     partOf: ?eCridInst .
+        ?pCridInst a ?pCridType ;
+                   denotes: ?personInst ;
+                   hasPart: ?pSymbolInst .
+        ?personInst a human: ;
+                    participatesIn: ?encInst .
+        ?encInst a hce: .
+        ?eCridInst a ?eCridType ;
+                   denotes: ?encInst .
+    } 
+    graph turboOntGraph: {
+        ?pCridType rdfs:subClassOf* crid: .
+        ?pSymbolType rdfs:subClassOf* symbol: .
+        ?eCridType rdfs:subClassOf* crid: .
+        ?eSymbolType rdfs:subClassOf* symbol: .
+    } 
+}"""
+    val fxnRes = arbitraryAsk(myAsk)
+    assert(fxnRes)
+  }
+
+
+  test("WITH PREFIXES and aliases, encounter started by soem kind of process boundary") {
+    val myAsk = """
+ask  where {
+    ?pSymbolInst 
+        hasRepresentation: 
+            "00002c66-a365-4e88-8e80-d52bcad4869e" ;
+                                                   a ?pSymbolType ;
+                                                   partOf: ?pCridInst .
+    ?pCridInst a ?pCridType ;
+               denotes: ?personInst ;
+               hasPart: ?pSymbolInst .
+    ?personInst a human: ;
+                participatesIn: ?encInst .
+    ?encInst a hce: .
+    #?hceStart starts: ?hce .
+    graph turboOntGraph: {
+        ?pCridType rdfs:subClassOf* crid: .
+        ?pSymbolType rdfs:subClassOf* symbol: .
+        #?hceStart rdfs:subClassOf* processBoundary: .
+    } 
+}"""
+    val fxnRes = arbitraryAsk(myAsk)
+    assert(fxnRes)
+  }
 
   //  tuplesResult.close
 
 }
+
