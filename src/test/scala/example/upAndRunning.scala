@@ -160,6 +160,76 @@ PREFIX starts: <http://purl.obolibrary.org/obo/RO_0002223>
     assert(fxnRes)
   }
 
+  test("untyped subjects") {
+    val myAsk = """
+      ask where {
+    graph <http://www.itmat.upenn.edu/biobank/expanded> {
+        ?s ?p ?o .
+    }
+    minus {
+        ?s a ?t
+    }
+}"""
+    val fxnRes = arbitraryAsk(myAsk)
+    assert(!fxnRes)
+  }
+
+  // http://purl.bioontology.org/ontology/CVX/140, not
+  // http://purl.bioontology.org/ontology/RXNORM/1006478, not http://purl.bioontology.org/ontology/RxNorm/316672
+  // this test would also fail if an upstream source used a RxNorm, SNOMED terms etc that wasn't defined in the relevant ontology
+  // http://purl.obolibrary.org/obo/NCIT_C53489, not http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C53489 ??? ICDs use http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#... style
+  test("untyped objects... requires that SNOMED, RxNorm and CVX have been loaded ON CODE and nci:C53489 'SNOMED' has been imported ito TURBO ontology") {
+    val myAsk = """
+ask
+where {
+    graph <http://www.itmat.upenn.edu/biobank/expanded> {
+        ?s ?p ?o .
+    }
+    filter(isuri(?o))
+    filter(?p != obo:IAO_0000142)
+    minus {
+        ?o a ?t
+    }
+}"""
+    val fxnRes = arbitraryAsk(myAsk)
+    assert(!fxnRes)
+  }
+
+  test("untyped objects... unfiltered mentions") {
+    val myAsk = """
+ask 
+where {
+    graph <http://www.itmat.upenn.edu/biobank/expanded> {
+        ?s ?p ?o .
+    }
+    filter(isuri(?o))
+#    filter(?p != obo:IAO_0000142)
+    minus {
+        ?o a ?t
+    }
+}"""
+    val fxnRes = arbitraryAsk(myAsk)
+    assert(!fxnRes)
+  }
+
+  // all graphs should have some basic annotations.
+  // see, for example, <http://purl.bioontology.org/ontology/RXNORM/> ?p ?o in graph <http://purl.bioontology.org/ontology/RXNORM/>
+  test("unannotated graphs") {
+    val myAsk = """
+ask
+#select distinct ?g
+where {
+    graph ?g {
+        ?s ?sp ?so .
+    }
+    minus {
+        ?g ?gp ?go
+    }
+}"""
+    val fxnRes = arbitraryAsk(myAsk)
+    assert(!fxnRes)
+  }
+
   // TODO: TURBO ontology (and all ontologies) should be loaded into a graph named after the subject of their '?a a owl:Ontology' statement
   // additional statements could saw where the ontology was loaded from, like a web URL
 
@@ -655,7 +725,6 @@ ask where {
     assert(fxnRes)
   }
 
-
   test("WITH PREFIXES and aliases, crid has symbol part with two expected representative values") {
     val myAsk = """
 ask  where {
@@ -692,8 +761,7 @@ ask  where {
     assert(fxnRes)
   }
 
-
-  test("WITH PREFIXES and aliases, encounter started by soem kind of process boundary") {
+  test("WITH PREFIXES and aliases, encounter started by some kind of process boundary") {
     val myAsk = """
 ask  where {
     ?pSymbolInst 
@@ -707,11 +775,11 @@ ask  where {
     ?personInst a human: ;
                 participatesIn: ?encInst .
     ?encInst a hce: .
-    #?hceStart starts: ?hce .
+    ?hceStart starts: ?encInst .
     graph turboOntGraph: {
         ?pCridType rdfs:subClassOf* crid: .
         ?pSymbolType rdfs:subClassOf* symbol: .
-        #?hceStart rdfs:subClassOf* processBoundary: .
+        ?hceStart rdfs:subClassOf* processBoundary: .
     } 
 }"""
     val fxnRes = arbitraryAsk(myAsk)
